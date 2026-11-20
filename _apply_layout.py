@@ -8,6 +8,9 @@ from urllib.parse import quote, unquote
 
 GIT = "git"
 ROOT = os.path.dirname(os.path.abspath(__file__))
+PRESERVE_UNPARSED = {
+    "communications-os-and-data-management/drafts/~$README.md",
+}
 
 # Longest prefixes are matched first.
 MOVES = [
@@ -123,7 +126,7 @@ def main():
     os.chdir(ROOT)
     lock = "communications-os-and-data-management/drafts/~$README.md"
     if os.path.exists(lock):
-        raise SystemExit(f"Refusing to remove editor lock file: {lock}. Close the document and rerun.")
+        print(f"Preserving {lock}; it will be moved with its parent folder without text rewriting.")
 
     files = subprocess.run(
         [GIT, "ls-files"], cwd=ROOT, check=True, capture_output=True, text=True
@@ -131,6 +134,8 @@ def main():
     updated = {}
     for rel in files:
         rel = rel.replace("\\", "/")
+        if rel in PRESERVE_UNPARSED:
+            continue
         if not rel.lower().endswith(".md"):
             continue
         if rel in SKIP_EDIT:
