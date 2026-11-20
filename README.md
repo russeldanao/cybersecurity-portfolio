@@ -15,6 +15,10 @@ A curated set of networking and security study notes, cited case studies, and la
 
 The folder structure contains only the selected materials included in this publication copy. Source notes are written in original wording and cite public references. No raw packet captures, school handouts, or copied slides are included.
 
+## Featured project
+
+**[BreeMusic](https://github.com/russeldanao/BreeMusic)**: a self-hosted iOS music streaming platform secured with Tailscale zero-trust access, a port-scoped least-privilege ACL, Face ID app lock, a STRIDE threat model, and CI secret scanning (gitleaks).
+
 ## Certifications
 
 - Cisco Networking Academy — Cybersecurity Essentials
