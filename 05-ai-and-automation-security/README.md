@@ -4,7 +4,6 @@ Local automation examples and planned defensive study of agentic-workflow risks.
 
 ## Contents
 
-- [PCAP protocol counter study guide](pcap-protocol-counter/README.md)
 - [Python for cybersecurity notes](notes/python-for-cybersecurity.md)
 
 ## Planned work

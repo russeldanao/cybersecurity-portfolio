@@ -20,7 +20,7 @@ This combined pathway groups command-line diagnostics, Wireshark exercises, and 
 3. [Wireshark Setup and Basics](../wireshark-01-setup-and-basics.md) — capture basics, interface selection, and display filters.
 4. [Wireshark ICMP/TCP/HTTP](../wireshark-02-icmp-tcp-http.md) — compare packet-level connectivity and application exchanges.
 5. [Wireshark FTP/FTPS](../wireshark-03-ftp-credentials.md) — use disposable lab credentials only; redact them in all evidence.
-6. [PCAP Protocol Counter](../../../../05-ai-and-automation-security/pcap-protocol-counter/README.md) — starter Python code counts NBNS, LLMNR, and SSDP by source IP. It has not been validated yet.
+6. [PCAP Protocol Counter](../../../network-security/labs/pcap-protocol-counter/README.md) — starter Python code counts NBNS, LLMNR, and SSDP by source IP. It has not been validated yet.
 
 ## Evidence and scope
 

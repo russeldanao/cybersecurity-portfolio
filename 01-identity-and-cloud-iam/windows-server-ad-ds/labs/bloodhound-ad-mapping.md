@@ -2,7 +2,7 @@
 > **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
 
 
-Status: **Draft — evidence pending.** No screenshots captured yet; commands below are correct and ready to run. Run only against a lab AD domain you own (e.g. [the Windows Server AD DS lab](../../../01-identity-and-cloud-iam/windows-server-ad-ds/README.md)) — BloodHound's whole purpose is surfacing real privilege-escalation paths, so pointing it at a domain you don't have authorization for is a different category of action entirely.
+Status: **Draft — evidence pending.** No screenshots captured yet; commands below are correct and ready to run. Run only against a lab AD domain you own (e.g. [the Windows Server AD DS lab](../README.md)) — BloodHound's whole purpose is surfacing real privilege-escalation paths, so pointing it at a domain you don't have authorization for is a different category of action entirely.
 
 ## What BloodHound actually does
 BloodHound isn't an exploit — it collects AD data (users, groups, sessions, ACLs, group memberships, trust relationships) that's already readable by any authenticated domain user, then graphs it to surface non-obvious attack paths (e.g. "this low-privilege user is a member of a group that has reset-password rights over a Domain Admin"). It's as much a blue-team tool as a red-team one — AD administrators run it to find and fix exactly those paths before an attacker does.
