@@ -1,5 +1,5 @@
 # PCAP Protocol Counter — Lab Study Guide
-> **Draft study guide ? prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../LAB-STUDY-TEMPLATE.md).
+> **Draft study guide ? prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../../LAB-STUDY-TEMPLATE.md).
 
 
 

@@ -10,7 +10,7 @@ A curated set of networking and security study notes, cited case studies, and la
 - [02 — Network & Host Hardening](02-network-and-host-hardening/README.md): network references and draft Windows protocol-hardening study guides.
 - [03 — Detection & Incident Response](03-detection-and-incident-response/README.md): case studies, detection notes, and blue-team lab drafts.
 - [04 — GRC & Risk Management](04-grc-and-risk-management/README.md): framework and policy materials; the NIST CSF 2.0 assessment package is planned.
-- [05 — AI & Automation Security](05-ai-and-automation-security/README.md): a draft local PCAP counter and planned agentic-workflow security study.
+- [05 — AI & Automation Security](05-ai-and-automation-security/README.md): Python-for-cybersecurity notes and a planned agentic-workflow security study.
 - [06 — Study Guides & Notes](06-study-guides-and-notes/README.md): sanitized coursework summaries and foundational references.
 
 The folder structure contains only the selected materials included in this publication copy. Source notes are written in original wording and cite public references. No raw packet captures, school handouts, or copied slides are included.

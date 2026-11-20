@@ -7,22 +7,23 @@ cybersecurity-portfolio/
 ├── 01-identity-and-cloud-iam/
 │   ├── cloud-fundamentals/
 │   └── windows-server-ad-ds/
+│       └── labs/
 ├── 02-network-and-host-hardening/
 │   ├── computer-networks/
 │   └── network-security/
+│       └── labs/
 ├── 03-detection-and-incident-response/
 │   ├── case-studies/
 │   ├── endpoint-logging-and-detection/
 │   ├── labs/
 │   ├── malware-detection-host-triage/
 │   ├── network-case-studies/
-│   ├── penetration-testing/
+│   ├── notes/
 │   └── sysmon-wazuh-detection/
 ├── 04-grc-and-risk-management/
 │   └── references/
 ├── 05-ai-and-automation-security/
-│   ├── notes/
-│   └── pcap-protocol-counter/
+│   └── notes/
 ├── 06-study-guides-and-notes/
 │   ├── communications-os-and-data-management/
 │   ├── cryptography/
@@ -31,7 +32,11 @@ cybersecurity-portfolio/
 ├── docs/
 ├── BUILD-CHECKLIST.md
 ├── LAB-STUDY-TEMPLATE.md
-└── PROJECT-README-TEMPLATE.md
+├── PROJECT-README-TEMPLATE.md
+├── LICENSE
+├── CONTENT-LICENSE.md
+├── _apply_layout.py
+└── restructure.py
 ```
 
 ## Lab lifecycle

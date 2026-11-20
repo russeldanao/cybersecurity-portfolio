@@ -4,7 +4,10 @@ Public case studies, defensive detection notes, and blue-team lab drafts. Histor
 
 ## Contents
 
-- [Penetration-testing and defensive tool notes](penetration-testing/README.md)
+- [Snort IDS lab study guide](labs/snort-ids.md)
+- [Pentbox honeypot log-analysis study guide](labs/pentbox-honeypot.md)
+- [LLMNR/NBT-NS poisoning lab study guide](labs/llmnr-poisoning-responder.md)
+- [DDoS, EternalBlue, and SMBGhost detection/mitigation notes](notes/ddos-eternalblue-smbghost-vulnerabilities.md)
 - [Malware detection and host triage](malware-detection-host-triage/README.md)
 - [Endpoint logging and detection](endpoint-logging-and-detection/README.md)
 - [Sysmon and Wazuh detection](sysmon-wazuh-detection/README.md)

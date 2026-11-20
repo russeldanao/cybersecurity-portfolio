@@ -6,6 +6,7 @@ Network and endpoint study guides, with lab procedures intended for safe local r
 
 - [Computer Networks](computer-networks/README.md)
 - [Name Resolution and Discovery lab study guide](network-security/labs/name-resolution-and-discovery/README.md)
+- [PCAP Protocol Counter study guide](network-security/labs/pcap-protocol-counter/README.md)
 - [Sanitization policy](../docs/sanitization-policy.md)
 
 ## Planned work

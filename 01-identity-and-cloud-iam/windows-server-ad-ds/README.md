@@ -1,5 +1,9 @@
 # Windows Server: AD DS, OU/Group Permissions, DHCP, RRAS
 
+Identity and directory-service lab drafts:
+
+- [BloodHound AD attack-path mapping](labs/bloodhound-ad-mapping.md) - defensive review of permissions and attack paths in an owned lab domain.
+
 **Lab 1** (this file — single DC, RRAS/NAT/VPN focus). See also [Lab 2](labs/lab-02-multi-domain-adds-dhcp-wds.md), a follow-on assignment covering a two-DC setup (Server Core + GUI), RAID 0, DHCP exclusions/reservations, and WDS network deployment — same AD DS/DHCP fundamentals, different scope. Both are drafts; combine into one writeup once real evidence exists for both.
 
 Status: **Draft — incomplete.** Every evidence slot in the source report (16 total: AD DS install, OU structure, folder ACLs, DHCP role/scope, RRAS/NAT, NAP, VPN) was an unfilled placeholder. No screenshots exist yet, so nothing here is verified. Holding this out of the published portfolio until it is.

@@ -1,5 +1,5 @@
 # Lab: Pentbox Honeypot and Log Analysis
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
+> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../LAB-STUDY-TEMPLATE.md).
 
 
 Status: **Draft — evidence pending.** No screenshots captured yet; commands below are correct and ready to run.
