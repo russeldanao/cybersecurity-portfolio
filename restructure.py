@@ -91,6 +91,7 @@ All hostnames, IPs, usernames, and identifiers are lab/dummy values. No credenti
 APPLY = "--apply" in sys.argv
 
 MD_LINK = re.compile(r'(\]\()([^)\s]+)((?:\s+"[^"]*")?\))')
+PRESERVE_UNPARSED = {"communications-os-and-data-management/drafts/~$README.md"}
 HTML_ATTR = re.compile(r'((?:src|href)=")([^"]+)(")')
 ABS = re.compile(
     r'^(https://(?:github\.com/(?:razdanao|russeldanao)/cybersecurity-portfolio/(?:blob|tree|raw)/main'
@@ -221,7 +222,7 @@ def main():
         sys.exit("Working tree not clean. Commit or stash first.")
 
     files = sh("git", "ls-files").splitlines()
-    md = [f for f in files if f.lower().endswith(".md")]
+    md = [f for f in files if f.lower().endswith(".md") and f not in PRESERVE_UNPARSED]
     updated = {}
     for f in md:
         nf = new_path(f)

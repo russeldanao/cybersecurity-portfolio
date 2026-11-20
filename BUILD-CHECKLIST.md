@@ -4,23 +4,23 @@ Use this list to turn the current portfolio into a reviewable public repository.
 
 ## 1. Publication hygiene
 
+- [ ] Use [LAB-STUDY-TEMPLATE.md](LAB-STUDY-TEMPLATE.md) for lab drafts, in this order: Objective, Environment, Findings / Baseline, Action / Hardening, Verification.
+- [ ] Keep every lab marked as a draft until it has been safely rerun and its new evidence verified.
 - [ ] Inspect every screenshot at full size; redact private addresses, MACs, IPv6 addresses, usernames, host/router names, capture filenames, device IDs, and the bytes pane where required.
 - [ ] Confirm image metadata has been stripped.
 - [ ] Keep PDFs, slide decks, handouts, course archives, credentials, raw unsanitized captures, and third-party materials out of Git.
 - [ ] Cite public standards and documentation; paraphrase concepts in original wording.
-- [ ] Run the Network Security sanitization checker from the network-security folder: python scripts/sanitize_check.py.
-- [ ] Review every warning manually; a clean text scan does not verify image redaction.
+- [ ] Manually scan text and inspect every image; the referenced automated sanitization checker is not present in this repository.
 - [ ] Check local Markdown links and image paths before publishing.
 
-## 2. Finish current evidence
+## 2. Rerun labs and collect fresh evidence
 
 ### Name Resolution and Discovery
-- [ ] Collect NetBIOS after-state nbtstat -n output.
-- [ ] Collect the NetBIOS ports 137–139 after-state check.
-- [ ] Capture the SSDP service state and confirm the UDP 1900 endpoint is absent.
-- [ ] Separately capture UPnP Host start type if retaining the claim that it was disabled.
-- [ ] Complete a DNS query/cache capture and explain query IDs, record types, TTLs, and cache behavior.
-- [ ] Keep each before/after packet comparison on the same filter and trigger.
+- [ ] Rerun the baseline and hardening checks in an isolated lab; treat historical counts as unverified.
+- [ ] Collect fresh NetBIOS after-state checks (`nbtstat -n` and ports 137–139).
+- [ ] Capture SSDP service state and UDP 1900 listener state; separately verify UPnP Host start type.
+- [ ] Complete a DNS query/cache exercise and explain record types, TTLs, and caching.
+- [ ] Compare before/after observations using the same filter, trigger, and capture window.
 
 ### Host Baselines and Virtualization
 - [ ] Fill in the VirtualBox/Kali environment versions and VM resource allocation.
@@ -61,6 +61,6 @@ Use this list to turn the current portfolio into a reviewable public repository.
 
 - [ ] Each combined lab links to its preserved source write-ups where useful.
 - [ ] Every command has a purpose and expected result.
-- [ ] Every result distinguishes observed facts from interpretation.
+- [ ] Every result distinguishes fresh observations from historical or expected behavior.
 - [ ] Draft or planned work is not described as completed.
 - [ ] Run the sanitization checker, inspect its warnings, and review the repository as a first-time reader.
