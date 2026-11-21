@@ -1,68 +1,77 @@
 # Name Resolution and Discovery Protocols — Lab Study Guide
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../../LAB-STUDY-TEMPLATE.md).
-
-
+> **Draft — baseline observations plus one hardening change.** Microsoft Defender PUA protection was changed from Audit to Enabled and the preference was verified. Functional blocking behavior was not tested. No other settings were changed during this rerun. [Use the lab template](../../../../LAB-STUDY-TEMPLATE.md).
 
 ## Sanitize First
 
 - Use an isolated, owned lab and dummy hostnames and accounts.
-- Review every screenshot before sharing. Existing images in this folder are historical artifacts and have not been revalidated as evidence for this draft.
-- Do not publish raw packet captures, real host or network identifiers, credentials, or personal data.
-- If an artifact cannot be confirmed safe, do not link or publish it.
+- Review every screenshot before sharing. Publish only sanitized configuration/results screenshots; never publish raw packet captures, private addresses, MAC addresses, credentials, internal hostnames, or personal data.
+- Use synthetic hostnames. The DNS lookup of `example.com` is a public-domain connectivity check, not an internal identifier.
+- Evidence exported during the rerun is available in the conversation; it has not yet been added to this repository.
 
 ## Objective
 
-Practice observing name-resolution and service-discovery traffic and evaluating host configuration changes for NBNS, LLMNR, and SSDP. Separately inspect a DHCP lease option and learn how DNS lookups and caching can be documented.
+Assess Windows name-resolution and service-discovery configuration, observe NBNS, LLMNR, SSDP, DHCP, and DNS behavior in a short isolated lab capture, and apply one reversible endpoint-protection setting change with configuration verification.
 
 ## Environment
 
-- **System:** Windows lab host; edition, build, and VM/network details must be recorded during the rerun.
-- **Tools:** Wireshark and Windows configuration, service, and listener checks; record versions when rerun.
-- **Isolation:** Owned lab only. Document the network mode and use synthetic hostnames.
-- **Prior trigger notes:** `ping nonexistentuser` was used for name-resolution observations; opening File Explorer > Network and waiting was used for SSDP observations. Reconfirm safe, reproducible triggers in the lab.
+- **Virtualization:** VMware Workstation; connected network adapter configured as Host-only and set to connect at power on. No bridged adapter was shown.
+- **Guest:** Windows 11 Pro, version 26H2, OS build 26300.9974.
+- **Packet analyzer:** Wireshark 4.6.9 (64-bit).
+- **Network profile:** Public; PowerShell reported `NoTraffic` for IPv4 and IPv6. `NlaSvc` was `Stopped` when checked. These are co-occurring observations; the cause of the profile was not established.
+- **Safety:** A pre-hardening VMware snapshot was created. Checks were performed in the isolated VM.
 
 ## Findings / Baseline
 
-The following are historical notes only. They are **not verified findings** because the prior evidence is unavailable or has not been revalidated:
-
-| Area | Historical note to retest |
+| Area | Observed baseline |
 |---|---|
-| NBNS | Notes describe NBNS as enabled and a packet count of 3 for a test trigger. |
-| LLMNR | Notes describe 8 queries and a UDP 5355 listener at baseline. |
-| SSDP | Notes describe SSDPSRV running, UDP 1900 activity, and 12 packets during discovery. |
-| DHCP option 51 | Notes describe a DHCP ACK with a 3600-second lease value. This is a lease observation, not a hardening result. |
-| DNS | A complete DNS lookup and cache analysis was not documented. |
-
-Collect a fresh baseline with the exact trigger, Wireshark filter, capture window, service state, and listener state recorded. Do not copy the historical counts into a new results section as observed data.
+| Windows Firewall | Domain, Private, and Public profiles enabled; effective inbound default `Block` and outbound default `Allow`. |
+| Microsoft Defender | Antivirus, real-time protection, and antimalware service reported enabled. |
+| NetBIOS over TCP/IP | `TcpipNetbiosOptions = 2` (disabled) on the active virtual adapter. Read-only endpoint checks returned no output for UDP 137/138 or TCP 139. |
+| LLMNR | Group Policy **Turn off multicast name resolution** displayed **Enabled** (LLMNR disabled by policy). Registry query produced no output; no registry value is claimed. |
+| SSDP / UPnP | `SSDPSRV` and `upnphost` both `Stopped`, startup type `Disabled`. UDP endpoint checks returned no output for ports 1900 and 5355. |
+| Short Wireshark observations | Display filters showed 0 matches for `llmnr` and `nbns` in a 41-packet capture window, and 0 matches for `ssdp` in a separate 15-packet window. These results apply only to those windows and triggers. |
+| Protocol hierarchy | The 15-packet SSDP-test capture was classified as UDP → DNS. This is a breakdown of that capture, not proof of successful DNS resolution. |
+| DHCP | Capture showed a DHCP Request and ACK. A separate read-only configuration summary reported a 30-minute lease; this duration is not inferred from the packets. |
+| DNS / network configuration | A DNS server was configured; no default gateway was present. `Resolve-DnsName example.com` timed out (`ERROR_TIMEOUT`). The configured server address is intentionally omitted. |
+| DNS connectivity checks | `Test-NetConnection` reported `PingSucceeded: False` and `TcpTestSucceeded: False` for the configured DNS server. These results do not establish UDP DNS reachability or explain the lookup timeout. |
+| PUA protection | `(Get-MpPreference).PUAProtection` returned `2` before the change (Audit mode). |
 
 ## Action / Hardening
 
-In an isolated, snapshot-backed Windows lab, review the relevant settings and test one change at a time:
+Changed Microsoft Defender Potentially Unwanted Application (PUA) protection from Audit mode to Enabled in the isolated VM:
 
-1. Record NetBIOS over TCP/IP state. If appropriate for the lab, disable it through the adapter's IPv4 Advanced > WINS settings.
-2. Record LLMNR policy and listener state. If appropriate for the lab, disable LLMNR through policy, apply the setting, and restart as required.
-3. Record SSDPSRV and UPnP Host state. If appropriate for the lab, disable only the services in scope and note any discovery features affected.
-4. Repeat the same test triggers after each change.
-5. Treat DHCP option inspection as a separate lease-audit exercise.
-6. Add DNS A/AAAA, MX, NS, and TXT lookup and cache inspection as a separate study exercise.
+```powershell
+Set-MpPreference -PUAProtection Enabled
+```
 
-Use the Microsoft documentation for the exact OS version. Do not apply settings to a production or shared system.
+No NetBIOS, LLMNR, SSDP/UPnP, firewall, network-profile, or DNS settings were changed during this rerun. Do not change those controls solely to generate traffic. Investigate the DNS timeout separately before considering network changes.
 
 ## Verification
 
-- **Status:** Not verified — prior evidence unavailable or not revalidated; rerun required.
-- **For each protocol:** Compare fresh before/after observations using the same trigger, filter, and capture duration; record relevant configuration, service, and listener state.
-- **Follow-up checks from old notes:** Record NetBIOS after-state checks (`nbtstat -n` and ports 137–139), UPnP Host start type, and DNS lookup/cache observations.
-- **Evidence:** None claimed for this draft. Add only newly captured, reviewed, and sanitized evidence.
-- **Limitations:** A zero packet count applies only to the tested trigger and observation window; it does not prove a protocol can never be used.
+- Re-ran `(Get-MpPreference).PUAProtection`; it returned `1` after the change (Enabled).
+- The verification screenshot shows the prior value (`2`), change command, and resulting value (`1`). A sanitized copy was exported in the conversation; upload it to this folder before adding an image link.
+- No PUA sample was run. This verifies the configured preference only, not detection or blocking behavior.
+- No post-change protocol capture was required because the PUA preference does not change the NBNS, LLMNR, SSDP, DHCP, or DNS settings documented above.
+
+## Limitations and Lessons Learned
+
+- Zero matching packets in a short capture only means none matched in that observation window; it does not prove a protocol can never be used.
+- A DNS server being configured does not prove it is reachable. Failed ICMP and TCP/53 checks do not determine whether DNS over UDP is reachable. The cause of the DNS timeout remains unknown.
+- The Public profile, `NoTraffic` connectivity values, and stopped `NlaSvc` status were observed; no causal relationship was established.
+- DHCP Request/ACK packets alone do not establish lease duration.
+- Packet captures were discarded. One accidental screenshot exposed private network identifiers and must not be reused. Only sanitized evidence should be published.
+- PUA protection was verified by reading its configuration value; no benign test file or unwanted-app sample was used.
 
 ## Study Notes
 
 - Distinguish configuration state from observed network behavior.
-- Explain the difference between NBNS, LLMNR, SSDP, DHCP lease options, and DNS.
-- Record false positives, unrelated multicast traffic, and test limitations.
+- NBNS and LLMNR support local name resolution; SSDP supports service discovery; DHCP assigns network configuration; DNS resolves domain names.
+- Record the trigger, display filter, observation window, configuration state, and evidence source for each test.
+- Preserve the VM snapshot until the lab write-up and evidence have been reviewed.
 
 ## References
 
+- [Microsoft Defender Antivirus PowerShell cmdlets](https://learn.microsoft.com/powershell/module/defender/)
+- [Microsoft Defender PUA protection](https://learn.microsoft.com/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)
+- [Wireshark User's Guide](https://www.wireshark.org/docs/wsug_html/)
 - See the Windows hardening notes in `windows-network-hardening/docs/`.
-- Add links to relevant Microsoft and Wireshark documentation for the OS and tool versions used during the rerun.
