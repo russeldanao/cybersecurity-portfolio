@@ -13,9 +13,9 @@ A curated set of networking and security study notes, cited case studies, and la
 - [05 — AI & Automation Security](05-ai-and-automation-security/README.md): Python-for-cybersecurity notes and a planned agentic-workflow security study.
 - [06 — Study Guides & Notes](06-study-guides-and-notes/README.md): sanitized coursework summaries and foundational references.
 
-## Lab environments
+## Platform and data security
 
-Use the [Lab Environments index](07-lab-environments/README.md) to group related work by shared setup—Windows Server identity, network analysis, defensive monitoring, local MySQL, and Linux basics.
+Use the [Platform and Data Security index](07-platform-and-data-security/README.md) for foundational Linux and local database practice, grouped by the environment they share.
 
 The folder structure contains only the selected materials included in this publication copy. Source notes are written in original wording and cite public references. No raw packet captures, school handouts, or copied slides are included.
 
