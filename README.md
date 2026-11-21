@@ -11,11 +11,11 @@ A curated set of networking and security study notes, cited case studies, and la
 - [03 — Detection & Incident Response](03-detection-and-incident-response/README.md): case studies, detection notes, and blue-team lab drafts.
 - [04 — GRC & Risk Management](04-grc-and-risk-management/README.md): framework and policy materials; the NIST CSF 2.0 assessment package is planned.
 - [05 — AI & Automation Security](05-ai-and-automation-security/README.md): Python-for-cybersecurity notes and a planned agentic-workflow security study.
-- [06 — Study Guides & Notes](06-study-guides-and-notes/README.md): sanitized coursework summaries and foundational references.
+- [06 — Platform & Data Security](06-platform-and-data-security/README.md): Linux, databases, programming foundations, and data-security references.
 
 ## Platform and data security
 
-Use the [Platform and Data Security index](07-platform-and-data-security/README.md) for foundational Linux and local database practice, grouped by the environment they share.
+Use the [Platform and Data Security index](06-platform-and-data-security/README.md) for foundational Linux and local database practice, grouped by the environment they share.
 
 The folder structure contains only the selected materials included in this publication copy. Source notes are written in original wording and cite public references. No raw packet captures, school handouts, or copied slides are included.
 

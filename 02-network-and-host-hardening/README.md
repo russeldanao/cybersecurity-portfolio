@@ -9,6 +9,8 @@ Network and endpoint study guides, with lab procedures intended for safe local r
 - [PCAP Protocol Counter study guide](network-security/labs/pcap-protocol-counter/README.md)
 - [Wireless assessment lab](network-security/labs/wireless-assessment/README.md)
 - [Cryptography and data integrity lab pathway](network-security/labs/cryptography-and-integrity/README.md)
+- [Network security notes](network-security/notes/)
+- [Network security study guides](network-security/study-guides/overview.md)
 - [Sanitization policy](../docs/sanitization-policy.md)
 
 ## Planned work

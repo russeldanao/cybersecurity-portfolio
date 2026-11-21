@@ -1,6 +1,6 @@
 # Operating Systems: Concepts, Windows vs Linux vs macOS, and Choosing for a Business
 
-Study notes in my own words. Hands-on: [Linux command-line practice](../../../07-platform-and-data-security/linux-basics/linux-command-line-basics.md).
+Study notes in my own words. Hands-on: [Linux command-line practice](linux-command-line-basics.md).
 
 ## 1. What an operating system does
 An OS manages the hardware and gives programs a safe way to use it. Its main jobs:

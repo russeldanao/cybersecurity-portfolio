@@ -16,7 +16,7 @@ Analysis in my own words, using public reporting: [The Hacker News](https://theh
 Researchers at Trellix described a campaign against government and defense targets that was split into several stages to stay hidden. It began with a **Microsoft Excel file** carrying an exploit for a Windows browser-engine flaw, **CVE-2021-40444** (in MSHTML), which ran a malicious program that acted as a downloader. The downloader fetched a malware family the researchers named **Graphite**, which used **Microsoft OneDrive as its command-and-control channel** through the Microsoft Graph API: the attackers placed encrypted commands in a folder, the victim's machine synced and ran them, and results were encrypted and sent back through OneDrive. Graphite then retrieved a stager that launched **Empire**, an open-source PowerShell post-exploitation framework often abused by attackers. Reporting linked the activity to a known espionage group with moderate confidence.
 
 ## 2. Mapping to the kill chain
-![Kill chain applied to the campaign](../../06-study-guides-and-notes/communications-os-and-data-management/screenshots/design/cyber-kill-chain-graphite-campaign.png)
+![Kill chain applied to the campaign](images/cyber-kill-chain-graphite-campaign.png)
 
 | Stage | In this campaign |
 |---|---|

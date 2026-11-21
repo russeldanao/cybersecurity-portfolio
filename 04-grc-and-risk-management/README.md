@@ -5,6 +5,7 @@ Starter governance, risk, and compliance materials. Future assessments must stat
 ## Contents
 
 - [Canadian cyber law and international frameworks](references/canadian-cyber-law-and-international-frameworks.md)
+- [Government cybersecurity publications](references/cybersecurity-publications.md)
 
 ## Planned work
 

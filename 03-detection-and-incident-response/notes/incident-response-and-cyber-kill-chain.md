@@ -1,6 +1,6 @@
 # Incident Response and the Cyber Kill Chain
 
-Study notes in my own words (CompTIA Security+ topic). Case study: [the MSHTML and Graphite espionage campaign](../case-studies/mshtml-graphite-espionage-campaign.md). Related: [database security](../../06-study-guides-and-notes/communications-os-and-data-management/notes/database-security.md).
+Study notes in my own words (CompTIA Security+ topic). Case study: [the MSHTML and Graphite espionage campaign](../case-studies/mshtml-graphite-espionage-campaign.md). Related: [database security](../../06-platform-and-data-security/database-management/notes/database-security.md).
 
 ## 1. Incident response process
 An **incident** is an event that threatens the confidentiality, integrity or availability of systems or data. Response follows a repeating cycle:
@@ -47,7 +47,7 @@ Lockheed Martin's model describes the steps of an intrusion. Stop it at any stag
 | 6 | **Command and control (C2)** | Establishes remote control | Egress filtering, DNS and proxy monitoring |
 | 7 | **Actions on objectives** | Steals, destroys or encrypts data | Data loss prevention, segmentation, backups |
 
-![The seven stages mapped to a real campaign](../../06-study-guides-and-notes/communications-os-and-data-management/screenshots/design/cyber-kill-chain-graphite-campaign.png)
+![The seven stages mapped to a real campaign](../case-studies/images/cyber-kill-chain-graphite-campaign.png)
 
 ### Which stage confirms malware is present?
 **Stage 5, Installation.** Delivery only means a malicious file arrived, and exploitation means code was triggered, but installation is where malware is placed and made to persist on the host. Finding a new unauthorized service, startup entry, dropped file or implant (through EDR, file-integrity monitoring or a hash match) is the evidence that malware is present in the environment. Stage 6 (C2 traffic) is the other strong confirmation, and often how it is first noticed.

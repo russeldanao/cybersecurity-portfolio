@@ -1,6 +1,6 @@
 # Authentication Controls
 
-Study notes in my own words (CompTIA Security+ topic). Related: [database security](database-security.md), [BioStar 2 case study](../../../03-detection-and-incident-response/case-studies/biostar-2-biometric-database-leak.md).
+Study notes in my own words (CompTIA Security+ topic). Related: [database security](../../06-platform-and-data-security/database-management/notes/database-security.md), [BioStar 2 case study](../../03-detection-and-incident-response/case-studies/biostar-2-biometric-database-leak.md).
 
 ## 1. AAA and the basics
 - **Identification:** claiming an identity (a username).

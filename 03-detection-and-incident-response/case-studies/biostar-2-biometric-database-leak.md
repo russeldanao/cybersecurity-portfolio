@@ -1,6 +1,6 @@
 # Case Study: A Biometric Security Database Left Open (BioStar 2, 2019)
 
-Analysis in my own words. Related: [authentication controls](../../06-study-guides-and-notes/communications-os-and-data-management/notes/authentication-controls.md), [database security](../../06-study-guides-and-notes/communications-os-and-data-management/notes/database-security.md).
+Analysis in my own words. Related: [authentication controls](../../01-identity-and-cloud-iam/notes/authentication-controls.md), [database security](../../06-platform-and-data-security/database-management/notes/database-security.md).
 
 ## Skills Demonstrated
 
@@ -41,5 +41,4 @@ Confidentiality was lost (data readable by anyone); integrity was at risk (data 
 
 ## 6. Takeaway
 Strong technology is undone by weak basics. The most valuable data in the system, fingerprints, was protected by nothing. For biometrics especially, **assume the data can never be reissued**, and protect it more strictly than anything you can change.
-
 

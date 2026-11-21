@@ -31,8 +31,8 @@ Official CompTIA objectives and sample content, reputable video courses such as 
 ## 6. Study map in this portfolio
 | Topic | Note |
 |---|---|
-| Authentication | [authentication-controls.md](authentication-controls.md) |
-| Mobile and IoT | [secure-mobile-solutions.md](secure-mobile-solutions.md) |
-| Incident response, kill chain | [incident-response-and-cyber-kill-chain.md](../../../03-detection-and-incident-response/notes/incident-response-and-cyber-kill-chain.md) |
-| Wireless attacks | [wi-fi-standards-and-attacks.md](wi-fi-standards-and-attacks.md) |
+| Authentication | [Authentication controls](../../01-identity-and-cloud-iam/notes/authentication-controls.md) |
+| Mobile and IoT | [Secure mobile solutions](../../02-network-and-host-hardening/network-security/notes/secure-mobile-solutions.md) |
+| Incident response, kill chain | [Incident response and cyber kill chain](../../03-detection-and-incident-response/notes/incident-response-and-cyber-kill-chain.md) |
+| Wireless attacks | [Wi-Fi standards and attacks](../../02-network-and-host-hardening/network-security/notes/wi-fi-standards-and-attacks.md) |
 | Risk, controls, laws | [Official CompTIA Security+ certification information](https://www.comptia.org/certifications/security) |

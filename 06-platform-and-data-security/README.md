@@ -14,6 +14,13 @@ This domain covers foundational platform administration and data-security practi
 | Local MySQL workstation | Sakila queries, local accounts, least privilege, backups/restores, and synthetic database design | [Database management](database-management/README.md) |
 | Kali/Linux workstation | Filesystem, shell, system information, plus OpenSSL hashing, encryption, and signing with disposable files | [Linux basics](linux-basics/README.md) and [cryptography practice](../02-network-and-host-hardening/network-security/labs/cryptography-and-integrity/README.md) |
 
+## Study resources
+
+- [Cryptography concepts](cryptography/README.md)
+- [Programming foundations](programming/fundamentals/README.md)
+- [Coursework and practice drafts](coursework/README.md)
+- [Security+ certification study path](career-and-reference/security-plus-certification-path.md)
+
 ## Safe sequencing
 
 1. Choose one environment track and record versions, topology, and reset/snapshot point.

@@ -68,6 +68,6 @@ Own working notes on the Ubuntu command-line surface most relevant to security w
 | `apt-cache policy <pkg>` | See installed vs. available versions — useful when checking if a package is patched |
 
 ## Notes for security work specifically
-- `chmod 600` + `chown` are the two commands worth memorizing for key/secret files — see the [cryptography study guide](../../cryptography/study-guide.md) on key protection.
+- `chmod 600` + `chown` are the two commands worth memorizing for key/secret files — see the [cryptography study guide](../cryptography/study-guide.md) on key protection.
 - `ss -l` and `ip addr show` are the fastest way to confirm what's actually listening before trusting a firewall rule.
 - `journalctl -u <unit>` is usually faster than digging through `/var/log` by hand when triaging a specific service.
