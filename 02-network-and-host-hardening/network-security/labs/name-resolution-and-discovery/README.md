@@ -4,13 +4,13 @@
 
 ## Key Results
 
-- The older lab recorded baseline and after-state observations for NetBIOS, LLMNR, and SSDP/UPnP. Those historical observations are summarized separately from the later follow-up.
+- The older lab recorded baseline and after-state observations for NetBIOS, LLMNR, and SSDP/UPnP. Sanitized screenshots for these historical checks are included below, separately from the later follow-up.
 - In the older evidence, NetBIOS changed from enabled to disabled; LLMNR after-state checks showed the policy value set to `0x0`, no matching packets, and no UDP/5355 listener; SSDP after-state checks showed `SSDPSRV` stopped/disabled and no matching traffic.
 - The later follow-up found Windows Firewall profiles enabled with inbound traffic blocked by default, Microsoft Defender protections enabled, and the prior NetBIOS/LLMNR/SSDP settings still in their hardened states.
 - Microsoft Defender Potentially Unwanted Application (PUA) protection was changed from Audit to Enabled during the later follow-up. A configuration read-back confirmed **Enabled**.
 - A DNS lookup for `example.com` timed out. The cause was not established.
 - Historical DHCP observations differ: an older DHCP ACK showed a 3600-second lease, while a later read-only summary reported 30 minutes. The discrepancy was not reconciled.
-- The screenshots below are sanitized evidence excerpts from the later follow-up, not a complete record of every historical observation. Raw packet captures are not included.
+- The screenshots are sanitized evidence excerpts, not a complete record of every lab observation. Raw packet captures are not included.
 
 ## Sanitize First
 
@@ -66,43 +66,79 @@ During the later follow-up, Microsoft Defender PUA protection was in Audit mode.
 
 ## Verification
 
-The later read-back verifies the PUA configuration only; no PUA sample was run, so detection and blocking behavior were not tested. The later follow-up also rechecked the hardened NetBIOS, LLMNR, and SSDP/UPnP configuration and observed short zero-match capture windows.
+The older screenshots below support selected historical configuration and capture observations. The later read-back verifies the PUA configuration only; no PUA sample was run, so detection and blocking behavior were not tested. The later follow-up also rechecked the hardened NetBIOS, LLMNR, and SSDP/UPnP configuration and observed short zero-match capture windows.
 
-The older DHCP ACK and historical protocol packet counts are summarized from the older evidence set and are not shown in the screenshots below. The later DHCP Request/ACK, 30-minute lease, DNS lookup timeout, and DNS-configured/no-gateway summary are text-reported observations; they are also not shown in the screenshots below.
+The older DHCP ACK and later DHCP Request/ACK and 30-minute lease, DNS lookup timeout, and DNS-configured/no-gateway summary are text-reported observations; they are not shown in the screenshots below.
 
 ### Sanitized Evidence
 
-#### Windows 11 baseline settings
+#### Historical NetBIOS baseline and after-state
+
+![Historical NetBIOS baseline configuration](../../images/netbios-baseline-config-redacted.png)
+
+*Look for: the earlier NetBIOS configuration state. Account and adapter identifiers are redacted.*
+
+![Historical NetBIOS baseline traffic](../../images/netbios-baseline-packets-redacted.png)
+
+*Look for: three NBNS matches in the historical capture window. Address and account details are redacted.*
+
+![Historical NetBIOS after-state](../../images/netbios-after-zero-redacted.png)
+
+*Look for: the disabled configuration and zero NBNS matches in the captured after-state window.*
+
+#### Historical LLMNR baseline and after-state
+
+![Historical LLMNR baseline traffic](../../images/llmnr-baseline-packets-redacted.png)
+
+*Look for: LLMNR matches in the earlier capture window. Address and test-host details are redacted.*
+
+![Historical LLMNR baseline listener](../../images/llmnr-baseline-listener-redacted.png)
+
+*Look for: the earlier UDP/5355 listener observation. Account and process details are redacted.*
+
+![Historical LLMNR after-state policy evidence](../../images/llmnr-after-registry-zero-redacted.png)
+
+*Look for: the recorded `EnableMulticast` after-state value.*
+
+![Historical LLMNR after-state capture](../../images/llmnr-after-zero-redacted.png)
+
+*Look for: zero LLMNR matches in the captured after-state window.*
+
+![Historical LLMNR after-state listener check](../../images/llmnr-after-no-listener-redacted.png)
+
+*Look for: the later UDP/5355 listener check with no matching listener shown.*
+
+#### Historical SSDP / UPnP baseline and after-state
+
+![Historical SSDP baseline traffic](../../images/ssdp-earlier-baseline-traffic-redacted.png)
+
+*Look for: SSDP traffic in the earlier baseline capture. Addresses and unrelated screen content are redacted.*
+
+![Historical SSDP after-state](../../images/ssdp-earlier-after-no-listener-redacted.png)
+
+*Look for: the stopped/disabled service and no UDP/1900 listener in the historical after-state check.*
+
+#### Later Windows 11 follow-up
 
 ![Windows 11 baseline settings](../../images/windows11-baseline-settings-evidence.png)
 
 *Look for: the later follow-up's firewall, Defender, name-resolution policy, service, and network-profile settings.*
 
-#### Wireshark protocol filters and hierarchy
-
 ![Wireshark protocol filters and hierarchy](../../images/wireshark-protocol-evidence.png)
 
 *Look for: the later follow-up's displayed filter results and protocol breakdown for short capture windows.*
-
-#### Network profile and connectivity
 
 ![Sanitized network profile and connectivity](../../images/network-profile-sanitized.png)
 
 *Look for: the Public profile and `NoTraffic` connectivity values observed during the later follow-up.*
 
-#### Network Location Awareness service status
-
 ![Network Location Awareness service status](../../images/nlasvc-status.png)
 
 *Look for: the stopped service status observed during the later follow-up.*
 
-#### DNS server connectivity checks
-
 ![Sanitized DNS server connectivity checks](../../images/dns-port-test-results.png)
 
 *Look for: failed ping and TCP connectivity checks; these do not test DNS over UDP.*
-
-#### PUA protection hardening and verification
 
 ![PUA protection change and verification excerpt](../../images/pua-protection-enabled.png)
 
