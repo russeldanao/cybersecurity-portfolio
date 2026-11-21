@@ -47,6 +47,14 @@ Set-MpPreference -PUAProtection Enabled
 No NetBIOS, LLMNR, SSDP/UPnP, firewall, network-profile, or DNS settings were changed during this rerun. Do not change those controls solely to generate traffic. Investigate the DNS timeout separately before considering network changes.
 
 ## Verification
+### Sanitized Evidence
+
+- [Windows 11 baseline settings](evidence/windows11-baseline-settings-evidence.png)
+- [Wireshark protocol filters and hierarchy](evidence/wireshark-protocol-evidence.png)
+- [Network profile and connectivity](evidence/network-profile-sanitized.png)
+- [Network Location Awareness service status](evidence/nlasvc-status.png)
+- [DNS server connectivity checks](evidence/dns-port-test-results.png)
+- [PUA protection hardening and verification](evidence/pua-protection-enabled.png)
 
 - Re-ran `(Get-MpPreference).PUAProtection`; it returned `1` after the change (Enabled).
 - The verification screenshot shows the prior value (`2`), change command, and resulting value (`1`): [PUA protection hardening and verification](evidence/pua-protection-enabled.png).
