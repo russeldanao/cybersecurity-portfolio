@@ -49,18 +49,29 @@ No NetBIOS, LLMNR, SSDP/UPnP, firewall, network-profile, or DNS settings were ch
 ## Verification
 ### Sanitized Evidence
 
-- [Windows 11 baseline settings](evidence/windows11-baseline-settings-evidence.png)
-- [Wireshark protocol filters and hierarchy](evidence/wireshark-protocol-evidence.png)
-- [Network profile and connectivity](evidence/network-profile-sanitized.png)
-- [Network Location Awareness service status](evidence/nlasvc-status.png)
-- [DNS server connectivity checks](evidence/dns-port-test-results.png)
-- [PUA protection hardening and verification](evidence/pua-protection-enabled.png)
+#### Windows 11 baseline settings
 
-- Re-ran `(Get-MpPreference).PUAProtection`; it returned `1` after the change (Enabled).
-- The verification screenshot shows the prior value (`2`), change command, and resulting value (`1`): [PUA protection hardening and verification](evidence/pua-protection-enabled.png).
-- No PUA sample was run. This verifies the configured preference only, not detection or blocking behavior.
-- No post-change protocol capture was required because the PUA preference does not change the NBNS, LLMNR, SSDP, DHCP, or DNS settings documented above.
+![Windows 11 baseline settings](evidence/windows11-baseline-settings-evidence.png)
 
+#### Wireshark protocol filters and hierarchy
+
+![Wireshark protocol filters and hierarchy](evidence/wireshark-protocol-evidence.png)
+
+#### Network profile and connectivity
+
+![Sanitized network profile and connectivity](evidence/network-profile-sanitized.png)
+
+#### Network Location Awareness service status
+
+![Network Location Awareness service status](evidence/nlasvc-status.png)
+
+#### DNS server connectivity checks
+
+![Sanitized DNS server connectivity checks](evidence/dns-port-test-results.png)
+
+#### PUA protection hardening and verification
+
+![PUA protection changed from Audit to Enabled and verified](evidence/pua-protection-enabled.png)
 ## Limitations and Lessons Learned
 
 - Zero matching packets in a short capture only means none matched in that observation window; it does not prove a protocol can never be used.
