@@ -57,7 +57,7 @@ Signal is measured in **dBm**, a negative number: closer to 0 is stronger.
 | Far corner | | | |
 
 ## 3. Read the dashboard
-![Nearby networks with names hidden](images/01-nearby-networks-ssids-hidden.png)
+![Nearby networks with names hidden](../../images/01-nearby-networks-ssids-hidden.png)
 *A scan of nearby networks. All network names are hidden and the spectrum graphs blurred, because they identify neighbors.*
 
 What the columns mean:
@@ -78,7 +78,7 @@ What the columns mean:
 - **No scanner can see passwords or private traffic;** it only reads what access points announce.
 
 ## 4. My own router
-![Own router detail, name and MAC hidden](images/02-own-router-detail-redacted.png)
+![Own router detail, name and MAC hidden](../../images/02-own-router-detail-redacted.png)
 *The detail view for my network. The network name, each radio's MAC address (BSSID) and the vendor name are hidden.*
 
 | Radio | Channel | Signal | PHY | Security | Notes |
