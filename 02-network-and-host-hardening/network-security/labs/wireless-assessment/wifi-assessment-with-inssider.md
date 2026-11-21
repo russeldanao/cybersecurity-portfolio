@@ -1,5 +1,5 @@
 # Lab: Assessing Your Own Wi-Fi with a Scanner (inSSIDer)
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
+> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../../LAB-STUDY-TEMPLATE.md).
 
 
 
@@ -57,7 +57,7 @@ Signal is measured in **dBm**, a negative number: closer to 0 is stronger.
 | Far corner | | | |
 
 ## 3. Read the dashboard
-![Nearby networks with names hidden](../screenshots/wifi/01-nearby-networks-ssids-hidden.png)
+![Nearby networks with names hidden](images/01-nearby-networks-ssids-hidden.png)
 *A scan of nearby networks. All network names are hidden and the spectrum graphs blurred, because they identify neighbors.*
 
 What the columns mean:
@@ -78,7 +78,7 @@ What the columns mean:
 - **No scanner can see passwords or private traffic;** it only reads what access points announce.
 
 ## 4. My own router
-![Own router detail, name and MAC hidden](../screenshots/wifi/02-own-router-detail-redacted.png)
+![Own router detail, name and MAC hidden](images/02-own-router-detail-redacted.png)
 *The detail view for my network. The network name, each radio's MAC address (BSSID) and the vendor name are hidden.*
 
 | Radio | Channel | Signal | PHY | Security | Notes |
@@ -101,7 +101,7 @@ What the columns mean:
   7. Use a **20 MHz channel on 2.4 GHz** on a non-overlapping channel if interference is a problem.
 
 ## 5. Other scanners and a note on exporting data
-Other network scanners include NetSpot, Acrylic Wi-Fi, Wireshark (with a monitor-mode adapter), Kismet, and wired-network scanners like Nmap (covered in the [scanners note](../notes/network-scanners-and-protocol-analyzers.md)). Some scanners can export their results; if you open an export in Wireshark or a spreadsheet, you will see the same fields as the dashboard: names, BSSIDs (MACs), channels, signal and security. Treat an export as sensitive: it lists everyone's networks.
+Other network scanners include NetSpot, Acrylic Wi-Fi, Wireshark (with a monitor-mode adapter), Kismet, and wired-network scanners like Nmap (covered in the [scanners note](../../../../06-study-guides-and-notes/communications-os-and-data-management/notes/network-scanners-and-protocol-analyzers.md)). Some scanners can export their results; if you open an export in Wireshark or a spreadsheet, you will see the same fields as the dashboard: names, BSSIDs (MACs), channels, signal and security. Treat an export as sensitive: it lists everyone's networks.
 
 ## 6. Screenshot shot list and redaction
 
@@ -122,7 +122,7 @@ Other network scanners include NetSpot, Acrylic Wi-Fi, Wireshark (with a monitor
 
 ## 8. Security connection (for the short answers)
 **What attacks could use a scanner like inSSIDer?** On its own it is reconnaissance, not an attack. It lets someone (a) find which networks exist and where the signal is strongest (*wardriving*), (b) pick out networks with weak or no security as targets, (c) spot **rogue access points** or an **evil twin** by comparing names and hardware addresses, and (d) choose a channel to interfere with. Defenders use the same view to find rogue devices and fix interference. This is why *what a network broadcasts* (name, security type) should assume it is public.
-See [Wi-Fi standards and attacks](../notes/wi-fi-standards-and-attacks.md).
+See [Wi-Fi standards and attacks](../../../../06-study-guides-and-notes/communications-os-and-data-management/notes/wi-fi-standards-and-attacks.md).
 
 ## 9. Troubleshooting
 
@@ -140,7 +140,7 @@ See [Wi-Fi standards and attacks](../notes/wi-fi-standards-and-attacks.md).
 - **What I want to learn next:** *(WPA3, wireless site surveys, or an access point with VLANs)*
 
 ## Sources and notes
-Based on public documentation for Wi-Fi scanners; the observations are from my own scan of my own network. Background: [Wi-Fi standards and attacks](../notes/wi-fi-standards-and-attacks.md).
+Based on public documentation for Wi-Fi scanners; the observations are from my own scan of my own network. Background: [Wi-Fi standards and attacks](../../../../06-study-guides-and-notes/communications-os-and-data-management/notes/wi-fi-standards-and-attacks.md).
 
 
 

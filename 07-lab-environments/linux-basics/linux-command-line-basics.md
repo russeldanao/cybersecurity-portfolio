@@ -1,11 +1,11 @@
-# Lab: Linux Command-Line Basics on Kali
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
+# Study Guide: Linux Command-Line Basics on Kali
+> **Draft study guide ? exercise results and prior evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting results.**
 
 
 
 **Goal:** get comfortable in the Linux terminal: move around, manage files, read system information, edit text, find help, and review what you ran. These are the day-to-day skills behind every security tool on Kali.
 
-**Who this is for:** beginners with a Kali VM (see the [Wireshark setup guide](../../../02-network-and-host-hardening/computer-networks/labs/wireshark-01-setup-and-basics.md)). **Time:** about 45 minutes.
+**Who this is for:** beginners with a Kali VM (see the [Wireshark setup guide](../../02-network-and-host-hardening/computer-networks/labs/wireshark-01-setup-and-basics.md)). **Time:** about 45 minutes.
 
 > **Safety:** work in a VM you can reset. `rm` deletes permanently, with no recycle bin. Practice destructive commands only on throwaway files you created.
 
@@ -55,17 +55,17 @@
 
 ## 3. My practice session
 ### System information
-![date, whoami and ls](../screenshots/linux/01-date-whoami-ls.png)
+![date, whoami and ls](images/01-date-whoami-ls.png)
 `date` showed the clock, `whoami` returned `root`, and `ls` listed one file, `nano.2762.save`. Nano creates a file named like that when it is interrupted, as an emergency copy of what you were editing.
 
-![uptime, uname, users and less](../screenshots/linux/02-uptime-uname-users-less.png)
+![uptime, uname, users and less](images/02-uptime-uname-users-less.png)
 `uptime` reported 16 minutes up, 2 users, load averages near 0. `uname` printed `Linux`. `users` listed the logged-in accounts (blacked out here). `less` with no file complained about a missing filename, which is its way of telling you it needs something to read.
 
 ### Editors and history
-![vim start screen](../screenshots/linux/03-vim-start-screen.png)
+![vim start screen](images/03-vim-start-screen.png)
 `vim` starts in **normal mode**: typing letters runs commands, not text. Press `i` to insert text, `Esc` to return, and `:q` or `:wq` to leave. Forgetting how to exit is the classic beginner trap.
 
-![command history](../screenshots/linux/04-command-history.png)
+![command history](images/04-command-history.png)
 `history` numbers every command from this session. In it, `sudo i` appears several times before `sudo -i`: the first form is wrong, because the option needs the dash. A numbered history like this is also an audit trail, and a risk.
 
 ## 4. Exercises (do these and note what you see)

@@ -1,6 +1,6 @@
 # Network Scanners and Protocol Analyzers
 
-Study notes in my own words. Related: [Wireshark guides](../../../02-network-and-host-hardening/computer-networks/labs/wireshark-01-setup-and-basics.md), [Wi-Fi assessment lab](../labs/wifi-assessment-with-inssider.md).
+Study notes in my own words. Related: [Wireshark guides](../../../02-network-and-host-hardening/computer-networks/labs/wireshark-01-setup-and-basics.md), [Wi-Fi assessment lab](../../../02-network-and-host-hardening/network-security/labs/wireless-assessment/wifi-assessment-with-inssider.md).
 
 > **Authorization:** scan and capture only networks and systems you own or are explicitly permitted to test.
 
@@ -23,7 +23,7 @@ Study notes in my own words. Related: [Wireshark guides](../../../02-network-and
 **Common port states:** *open* (a service is listening), *closed* (reachable, nothing listening), *filtered* (a firewall silently drops probes).
 
 ## 3. Wireless scanners
-Wi-Fi scanners such as inSSIDer, NetSpot and `nmcli` list nearby access points: name (SSID), hardware address (BSSID), channel, signal, and security type. They help with site surveys and with spotting rogue or misconfigured access points. See the [Wi-Fi lab](../labs/wifi-assessment-with-inssider.md).
+Wi-Fi scanners such as inSSIDer, NetSpot and `nmcli` list nearby access points: name (SSID), hardware address (BSSID), channel, signal, and security type. They help with site surveys and with spotting rogue or misconfigured access points. See the [Wi-Fi lab](../../../02-network-and-host-hardening/network-security/labs/wireless-assessment/wifi-assessment-with-inssider.md).
 
 ## 4. Protocol analyzers
 An analyzer captures frames from a network interface and decodes them layer by layer. Key ideas:

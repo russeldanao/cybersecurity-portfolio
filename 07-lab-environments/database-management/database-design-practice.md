@@ -1,11 +1,11 @@
-# Lab: Designing a Relational Database, Reviewing My First ERD, and Writing the SQL
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
+# Study Guide: Relational Database Design and SQL Practice
+> **Draft study guide ? exercise results and prior evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting results.**
 
 
 
 **Goal:** turn a short client brief into a relational design (an entity-relationship diagram and a rerunnable SQL script), then review my own first draft, fix its mistakes, and record the lessons.
 
-**Who this is for:** beginners to database design. **Time:** about 90 minutes. Files: [`it_asset_tracker.sql`](../sql/it_asset_tracker.sql) and [`cookie_bakery.sql`](../sql/cookie_bakery.sql).
+**Who this is for:** beginners to database design. **Time:** about 90 minutes. Files: [`it_asset_tracker.sql`](sql/it_asset_tracker.sql) and [`cookie_bakery.sql`](sql/cookie_bakery.sql).
 
 ## Skills Demonstrated
 
@@ -27,7 +27,7 @@
 A company's IT team needs a database. It must track **employees** (ID, first name, last name, email, location), **workstations** (device ID, device type, cost) and **logs** (ID, description, and a timestamp with month, day, year and hours). **One employee has one workstation** and **one workstation has many logs**. The client also wants to track **ticket requests** from employees about workstations but did not say how, so the designer decides.
 
 ## 1. My first ERD draft
-![My first ERD draft](../screenshots/design/draft-it-asset-erd.png)
+![My first ERD draft](images/draft-it-asset-erd.png)
 
 It captured the three tables and the two relationships, which is a decent start. Reviewing it, I found these problems:
 
@@ -42,7 +42,7 @@ It captured the three tables and the two relationships, which is a decent start.
 | One-to-one not enforced | The diagram line alone does not stop two workstations sharing an employee | `UNIQUE` on `workstations.employee_id` |
 
 ## 2. The corrected design
-![Corrected ERD](../screenshots/design/it-asset-tracker-erd.png)
+![Corrected ERD](images/it-asset-tracker-erd.png)
 
 **Reading the crow's-foot symbols:** a single bar means *one*; a circle means *zero*; the three-pronged "crow's foot" means *many*. So `bar + circle` is "zero or one" and `circle + crow's foot` is "zero or many".
 
@@ -56,7 +56,7 @@ It captured the three tables and the two relationships, which is a decent start.
 **Ticket design decision:** a ticket belongs to the employee who raised it, may point at one workstation, and carries a request type, status and priority (`ENUM`s), a description, and created and resolved timestamps. This answers the open request without guessing more than the brief allows.
 
 ## 3. The SQL script
-The full script is in [`sql/it_asset_tracker.sql`](../sql/it_asset_tracker.sql). The practices it demonstrates:
+The full script is in [`sql/it_asset_tracker.sql`](sql/it_asset_tracker.sql). The practices it demonstrates:
 - **Rerunnable:** `CREATE DATABASE IF NOT EXISTS` and `CREATE TABLE IF NOT EXISTS`, so a second run does no harm.
 - **`USE` after creating the database**, so tables land in the right place.
 - **Auto-incrementing primary keys:** `INT UNSIGNED NOT NULL AUTO_INCREMENT`.
@@ -80,7 +80,7 @@ I wrote a small bakery database as an earlier exercise. Its first version had mi
 | Author name and personal details in the file header | Not needed in a shared file | Short, neutral header |
 
 ## 5. Try it
-- [ ] Install MySQL (see the [Workbench lab](mysql-workbench-setup-and-sakila-queries.md)).
+- [ ] Install MySQL (see the [Workbench lab](mysql-workbench-sakila-practice.md)).
 - [ ] Open `it_asset_tracker.sql` in Workbench and run it. Run it again to prove it is safe to repeat.
 - [ ] In Workbench use **Database, Reverse Engineer** to produce an ER diagram from the live database and compare it with mine.
 - [ ] Insert a row twice with `INSERT IGNORE` and note that the second does nothing.
@@ -109,7 +109,7 @@ I wrote a small bakery database as an earlier exercise. Its first version had mi
 - **Data minimization:** store only what you need (the design keeps contact details in one table).
 - **Integrity constraints are security controls:** they stop bad or inconsistent data from entering.
 - **Auditability:** the `logs` and `tickets` tables, with timestamps, support accountability and investigation.
-- **Separate accounts for people and applications**, with privileges limited to the tables each needs (see the [users and backup lab](mysql-users-privileges-backup-restore.md)).
+- **Separate accounts for people and applications**, with privileges limited to the tables each needs (see the [users and backup lab](mysql-users-privileges-and-recovery.md)).
 
 ## 9. Troubleshooting
 

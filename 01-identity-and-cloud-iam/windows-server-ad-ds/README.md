@@ -3,6 +3,9 @@
 Identity and directory-service lab drafts:
 
 - [BloodHound AD attack-path mapping](labs/bloodhound-ad-mapping.md) - defensive review of permissions and attack paths in an owned lab domain.
+- [Windows Server AD DS lab study](labs/windows-server-ad-ds-lab-study.md)
+- [Windows Server forest, DFS, and Hyper-V lab study](labs/windows-server-forest-dfs-hyperv-lab-study.md)
+- [Windows Deployment Services lab study](labs/windows-deployment-services-lab-study.md)
 
 **Lab 1** (this file — single DC, RRAS/NAT/VPN focus). See also [Lab 2](labs/lab-02-multi-domain-adds-dhcp-wds.md), a follow-on assignment covering a two-DC setup (Server Core + GUI), RAID 0, DHCP exclusions/reservations, and WDS network deployment — same AD DS/DHCP fundamentals, different scope. Both are drafts; combine into one writeup once real evidence exists for both.
 

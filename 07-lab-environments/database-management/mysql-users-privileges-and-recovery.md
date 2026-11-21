@@ -1,13 +1,13 @@
-# Lab: MySQL Users, Least Privilege, and Recovering from Human Error
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
+# Practice Guide: MySQL Users, Least Privilege, and Recovery
+> **Draft study guide ? exercise results and prior evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting results.**
 
 
 
 **Goal:** create a manager and an intern account with different privileges, make a "backup before the risky work" habit, simulate an accidental change, detect it with a data-integrity check, and restore from backup.
 
-**Who this is for:** learners who finished the [MySQL Workbench lab](mysql-workbench-setup-and-sakila-queries.md). **Time:** about 60 minutes (the validation scripts can take a few minutes).
+**Who this is for:** learners who finished the [MySQL Workbench lab](mysql-workbench-sakila-practice.md). **Time:** about 60 minutes (the validation scripts can take a few minutes).
 
-> **Safety:** do this only on your own local MySQL server. Use lab-only passwords, never real ones. All commands are in [`users_and_backup_exercise.sql`](../sql/users_and_backup_exercise.sql).
+> **Safety:** do this only on your own local MySQL server. Use lab-only passwords, never real ones. All commands are in [`users_and_backup_exercise.sql`](sql/users_and_backup_exercise.sql).
 
 ## Skills Demonstrated
 

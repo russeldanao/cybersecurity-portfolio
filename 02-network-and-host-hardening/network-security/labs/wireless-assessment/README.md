@@ -3,7 +3,7 @@
 
 
 
-This combined entry points to the existing [Wi-Fi assessment with inSSIDer runbook](../wifi-assessment-with-inssider.md). The write-up includes initial redacted evidence; the walk test, measurements, configuration review, and remaining screenshots still need to be completed.
+This combined entry points to the [Wi-Fi assessment with inSSIDer runbook](wifi-assessment-with-inssider.md). The write-up includes initial redacted evidence; the walk test, measurements, configuration review, and remaining screenshots still need to be completed.
 
 ## Skills Demonstrated
 
@@ -15,7 +15,6 @@ This combined entry points to the existing [Wi-Fi assessment with inSSIDer runbo
 
 Use only your own wireless network or one you are authorized to assess. Redact SSIDs, BSSIDs, nearby device names, and location information.
 
-Evidence currently staged: [nearby networks with SSIDs hidden](../../screenshots/wifi/01-nearby-networks-ssids-hidden.png) and [own-router detail redacted](../../screenshots/wifi/02-own-router-detail-redacted.png).
-
+Evidence currently staged: [nearby networks with SSIDs hidden](images/01-nearby-networks-ssids-hidden.png) and [own-router detail redacted](images/02-own-router-detail-redacted.png).
 
 
