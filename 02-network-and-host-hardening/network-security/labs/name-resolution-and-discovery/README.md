@@ -60,37 +60,37 @@ The DHCP Request/ACK, 30-minute lease, DNS lookup timeout, and DNS-configured/no
 
 #### Windows 11 baseline settings
 
-![Windows 11 baseline settings](evidence/windows11-baseline-settings-evidence.png)
+![Windows 11 baseline settings](images/windows11-baseline-settings-evidence.png)
 
 *Look for: the documented firewall, Defender, name-resolution policy, service, and network-profile settings.*
 
 #### Wireshark protocol filters and hierarchy
 
-![Wireshark protocol filters and hierarchy](evidence/wireshark-protocol-evidence.png)
+![Wireshark protocol filters and hierarchy](images/wireshark-protocol-evidence.png)
 
 *Look for: the displayed filter results and the protocol breakdown for the short test capture.*
 
 #### Network profile and connectivity
 
-![Sanitized network profile and connectivity](evidence/network-profile-sanitized.png)
+![Sanitized network profile and connectivity](images/network-profile-sanitized.png)
 
 *Look for: the Public profile and `NoTraffic` connectivity values.*
 
 #### Network Location Awareness service status
 
-![Network Location Awareness service status](evidence/nlasvc-status.png)
+![Network Location Awareness service status](images/nlasvc-status.png)
 
 *Look for: the observed stopped service status.*
 
 #### DNS server connectivity checks
 
-![Sanitized DNS server connectivity checks](evidence/dns-port-test-results.png)
+![Sanitized DNS server connectivity checks](images/dns-port-test-results.png)
 
 *Look for: the failed ping and TCP connectivity checks; these do not test DNS over UDP.*
 
 #### PUA protection hardening and verification
 
-![PUA protection change and verification excerpt](evidence/pua-protection-enabled.png)
+![PUA protection change and verification excerpt](images/pua-protection-enabled.png)
 
 *Look for: the change and follow-up read-back. This is a cropped verification excerpt, not complete lab evidence.*
 
