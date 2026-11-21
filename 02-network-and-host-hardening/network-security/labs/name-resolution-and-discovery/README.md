@@ -49,7 +49,7 @@ No NetBIOS, LLMNR, SSDP/UPnP, firewall, network-profile, or DNS settings were ch
 ## Verification
 
 - Re-ran `(Get-MpPreference).PUAProtection`; it returned `1` after the change (Enabled).
-- The verification screenshot shows the prior value (`2`), change command, and resulting value (`1`). A sanitized copy was exported in the conversation; upload it to this folder before adding an image link.
+- The verification screenshot shows the prior value (`2`), change command, and resulting value (`1`): [PUA protection hardening and verification](evidence/pua-protection-enabled.png).
 - No PUA sample was run. This verifies the configured preference only, not detection or blocking behavior.
 - No post-change protocol capture was required because the PUA preference does not change the NBNS, LLMNR, SSDP, DHCP, or DNS settings documented above.
 
