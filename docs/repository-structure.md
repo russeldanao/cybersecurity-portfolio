@@ -6,12 +6,14 @@ The portfolio is organized by the six domains in the root [README](../README.md)
 cybersecurity-portfolio/
 ├── 01-identity-and-cloud-iam/
 │   ├── cloud-fundamentals/
+│   ├── notes/
 │   └── windows-server-ad-ds/
-│       └── labs/
 ├── 02-network-and-host-hardening/
 │   ├── computer-networks/
 │   └── network-security/
-│       └── labs/
+│       ├── labs/
+│       ├── notes/
+│       └── study-guides/
 ├── 03-detection-and-incident-response/
 │   ├── case-studies/
 │   ├── endpoint-logging-and-detection/
@@ -19,27 +21,24 @@ cybersecurity-portfolio/
 │   ├── malware-detection-host-triage/
 │   ├── network-case-studies/
 │   ├── notes/
+│   ├── penetration-testing/
 │   └── sysmon-wazuh-detection/
 ├── 04-grc-and-risk-management/
 │   └── references/
 ├── 05-ai-and-automation-security/
 │   └── notes/
-├── 06-study-guides-and-notes/
-│   ├── communications-os-and-data-management/
+├── 06-platform-and-data-security/
+│   ├── career-and-reference/
+│   ├── coursework/
 │   ├── cryptography/
-│   ├── network-security-notes/
-│   └── programming-fundamentals/
-├── 07-platform-and-data-security/
 │   ├── database-management/
-│   └── linux-basics/
+│   ├── linux-basics/
+│   └── programming/
 ├── docs/
-├── BUILD-CHECKLIST.md
 ├── LAB-STUDY-TEMPLATE.md
 ├── PROJECT-README-TEMPLATE.md
 ├── LICENSE
-├── CONTENT-LICENSE.md
-├── _apply_layout.py
-└── restructure.py
+└── CONTENT-LICENSE.md
 ```
 
 ## Lab lifecycle
@@ -50,4 +49,4 @@ cybersecurity-portfolio/
 4. Record the objective, environment, findings/baseline, action/hardening, and verification.
 5. Publish only fresh evidence that has been reviewed and sanitized.
 
-The `06-study-guides-and-notes/` area is for coursework summaries and reference notes, with no lab directories. Technical lab drafts stay in their domain folders; foundational Linux and database practice is grouped under `07-platform-and-data-security/`, organized by shared setup.
+Study guides and notes are filed with the domain they support. Identity, network, detection, and GRC references live alongside their relevant materials; general programming, Linux, database, and cryptography foundations live under `06-platform-and-data-security/`. Related exercises are grouped by shared setup.

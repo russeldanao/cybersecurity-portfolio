@@ -13,6 +13,7 @@ Public case studies, defensive detection notes, and blue-team lab drafts. Histor
 - [Sysmon and Wazuh detection](sysmon-wazuh-detection/README.md)
 - [Case studies](case-studies/)
 - [Network case studies](network-case-studies/)
+- [Assessment and defensive study notes](notes/assessment-and-defense-overview.md)
 
 ## Planned work
 

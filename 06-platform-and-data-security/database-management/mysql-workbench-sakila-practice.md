@@ -104,7 +104,7 @@ Do not show your root password, and turn off "Save password in vault" if you do 
 ## 8. Security connection (for the short answers)
 - **SQL injection** happens when user input is pasted into a query string. The defense is **parameterized queries**, not clever filtering.
 - **Least privilege:** applications should connect with an account that can do only what they need, never `root`.
-- **Default and weak credentials** are how many database compromises begin; see [database security](../../06-study-guides-and-notes/communications-os-and-data-management/notes/database-security.md).
+- **Default and weak credentials** are how many database compromises begin; see [database security](notes/database-security.md).
 
 ## 9. Troubleshooting
 

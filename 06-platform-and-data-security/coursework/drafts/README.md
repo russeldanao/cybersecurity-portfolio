@@ -17,10 +17,10 @@ Complete each draft yourself, follow its steps, and check the checklist before c
 4. [Draft 04 - Write a function using user input](python/draft-04-function-with-user-input.md)
 5. [Draft 05 - Build a grading program](python/draft-05-grading-program.md)
 6. [Draft 06 - Research Python libraries](python/draft-06-python-library-research.md)
-7. [Draft 07 - Describe five network ports](networking/draft-07-five-network-ports.md)
+7. [Draft 07 - Describe five network ports](../../../02-network-and-host-hardening/network-security/study-guides/coursework-drafts/draft-07-five-network-ports.md)
 8. [Draft 08 - Create a resume webpage](html/draft-08-personal-resume-webpage.md)
 9. [Draft 09 - Scrape practice quotes](python/draft-09-quote-scraper.md)
-10. [Draft 10 - Retrieve a socket banner](networking/draft-10-socket-banner-grabber.md)
+10. [Draft 10 - Retrieve a socket banner](../../../02-network-and-host-hardening/network-security/study-guides/coursework-drafts/draft-10-socket-banner-grabber.md)
 
 ## Study reference
 

@@ -8,7 +8,7 @@ This overview points to defensive assessment and security-concept materials. Lab
 - [DDoS / EternalBlue / SMBGhost — Vulnerability Notes](../../03-detection-and-incident-response/notes/ddos-eternalblue-smbghost-vulnerabilities.md) — what each vulnerability is, how to detect it, how to patch/mitigate it. **Final** (attack-execution steps intentionally omitted).
 - **Planned defensive notes:** DHCP starvation and rogue DHCP detection and switch-level mitigations; no attack-execution procedures.
 - **Planned defensive notes:** credential-dumping and lateral-movement detection and mitigation; no credential-theft procedures.
-- [Concept Notes: DHCP Starvation, Malware Types, LLMNR, BloodHound, Metasploit](network-attack-concepts.md) — conceptual write-up, no lab evidence required. **Final.**
+- [Concept Notes: DHCP Starvation, Malware Types, LLMNR, BloodHound, Metasploit](../../02-network-and-host-hardening/network-security/notes/network-attack-concepts.md) — conceptual write-up, no lab evidence required. **Final.**
 - **Planned tool notes:** defensive context for network-analysis and password-auditing tools.
 
 **Scope note:** phishing-kit and credential-harvesting-page tooling, and keylogger/persistence tooling, are deliberately excluded from this project — that category isn't something this portfolio builds or documents setup for.

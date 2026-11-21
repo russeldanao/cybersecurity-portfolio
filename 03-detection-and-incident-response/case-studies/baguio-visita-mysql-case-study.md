@@ -1,6 +1,6 @@
 # Case Study: A City Builds a Visitor Registration System on MySQL (Baguio, Philippines)
 
-Analysis in my own words, based on a vendor case study published by Oracle: [Baguio relaunches local tourism and protects visitors with Oracle Cloud](https://oracle.com/customers/city-of-baguio) (also on [mysql.com](https://www.mysql.com/why-mysql/case-studies/baguio-tourism-mysql-heatwave-oracle-cloud.html)). Related: [databases and SQL](../../06-study-guides-and-notes/communications-os-and-data-management/notes/databases-and-sql-fundamentals.md), [database security](../../06-study-guides-and-notes/communications-os-and-data-management/notes/database-security.md).
+Analysis in my own words, based on a vendor case study published by Oracle: [Baguio relaunches local tourism and protects visitors with Oracle Cloud](https://oracle.com/customers/city-of-baguio) (also on [mysql.com](https://www.mysql.com/why-mysql/case-studies/baguio-tourism-mysql-heatwave-oracle-cloud.html)). Related: [databases and SQL](../../06-platform-and-data-security/database-management/notes/databases-and-sql-fundamentals.md), [database security](../../06-platform-and-data-security/database-management/notes/database-security.md).
 
 > **Read it as marketing:** the source is a customer story from the vendor whose products were chosen. Treat the claims as the vendor's claims, not independently verified results.
 
@@ -42,5 +42,4 @@ Comparable managed relational database services exist from other cloud providers
 
 ## 6. Takeaways
 Relational databases remain the workhorse for transactional, regulated data; speed-to-launch is a strong argument for managed cloud services; and the harder questions are usually about **privacy, retention and accountability**, not the database engine.
-
 
