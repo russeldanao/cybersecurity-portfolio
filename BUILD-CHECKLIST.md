@@ -1,66 +1,29 @@
 # Portfolio Build Checklist
 
-Use this list to turn the current portfolio into a reviewable public repository. Keep status statements aligned with evidence and use numbered steps when they help reproduce setup or command order.
+Use this as a private working checklist for turning draft study guides into evidence-backed portfolio projects. Work only in local or isolated labs that you own or are authorized to use. Existing historical notes are not fresh evidence.
 
-## 1. Publication hygiene
+## Recommended first rerun
 
-- [ ] Use [LAB-STUDY-TEMPLATE.md](LAB-STUDY-TEMPLATE.md) for lab drafts, in this order: Objective, Environment, Findings / Baseline, Action / Hardening, Verification.
-- [ ] Keep every lab marked as a draft until it has been safely rerun and its new evidence verified.
-- [ ] Inspect every screenshot at full size; redact private addresses, MACs, IPv6 addresses, usernames, host/router names, capture filenames, device IDs, and the bytes pane where required.
-- [ ] Confirm image metadata has been stripped.
-- [ ] Keep PDFs, slide decks, handouts, course archives, credentials, raw unsanitized captures, and third-party materials out of Git.
-- [ ] Cite public standards and documentation; paraphrase concepts in original wording.
-- [ ] Manually scan text and inspect every image; the referenced automated sanitization checker is not present in this repository.
-- [ ] Check local Markdown links and image paths before publishing.
+- [ ] Re-run the [Name Resolution and Discovery lab](02-network-and-host-hardening/network-security/labs/name-resolution-and-discovery/README.md) in an isolated Windows lab.
+- [ ] Record the environment, baseline, one hardening change at a time, and verification using the [lab study template](LAB-STUDY-TEMPLATE.md).
+- [ ] Compare fresh before/after results with the same trigger, filter, and capture window.
+- [ ] Sanitize any screenshots or output before adding them; do not publish raw packet captures or identifying network details.
 
-## 2. Rerun labs and collect fresh evidence
+## Other portfolio builds
 
-### Name Resolution and Discovery
-- [ ] Rerun the baseline and hardening checks in an isolated lab; treat historical counts as unverified.
-- [ ] Collect fresh NetBIOS after-state checks (`nbtstat -n` and ports 137–139).
-- [ ] Capture SSDP service state and UDP 1900 listener state; separately verify UPnP Host start type.
-- [ ] Complete a DNS query/cache exercise and explain record types, TTLs, and caching.
-- [ ] Compare before/after observations using the same filter, trigger, and capture window.
+- [ ] Finish the [Network Diagnostics and Packet Analysis pathway](02-network-and-host-hardening/computer-networks/labs/network-diagnostics-and-packet-analysis/README.md), clearly separating any existing observations from new rerun results.
+- [ ] Validate the [PCAP Protocol Counter](02-network-and-host-hardening/network-security/labs/pcap-protocol-counter/README.md) with authorized sample captures; document its limitations.
+- [ ] Choose one lab from [Detection & Incident Response](03-detection-and-incident-response/README.md) and write a case study with triage, a timeline, IOCs, containment, recovery, and lessons learned.
+- [ ] Build the planned Entra ID lifecycle and asset-risk lab using dummy identities and eligible free or local resources.
+- [ ] Build the planned GRC package: NIST CSF 2.0 maturity assessment, risk register, and starter policy/SoA outline.
+- [ ] Build the planned AI workflow security study only in a throwaway account and isolated folder; prevent unintended external actions.
 
-### Host Baselines and Virtualization
-- [ ] Fill in the VirtualBox/Kali environment versions and VM resource allocation.
-- [ ] Explain NAT, host-only, internal, and bridged modes in the context of this lab.
-- [ ] Capture snapshot creation and restore.
-- [ ] Document isolation evidence and the hardware virtualization troubleshooting steps.
+## Publication review
 
-## 3. Build the draft labs
-
-### Network Diagnostics and Packet Analysis
-- [ ] Explain ipconfig, ping, nslookup, tracert, and netstat outputs.
-- [ ] Capture a TCP handshake and a DNS query/response.
-- [ ] Compare cleartext HTTP with TLS in a controlled lab application.
-- [ ] Complete the PCAP analysis report; publish only sanitized captures.
-
-### Firewall and ARP Defense
-- [ ] Record firewall profile defaults and the baseline.
-- [ ] Create, test, and remove an inbound and outbound test rule.
-- [ ] Capture a normal ARP exchange on an isolated owned network.
-- [ ] Explain detection signals and mitigations, including their limitations.
-
-### Network Design and Reconnaissance
-- [ ] Complete subnetting practice and finish the subnet calculator functions.
-- [ ] Build two subnets with a router; compare static and dynamic routes.
-- [ ] Record convergence after a controlled link failure.
-- [ ] Scan only an owned target on an isolated lab network and explain the observed packets.
-
-### Cryptography and Data Integrity
-- [ ] Demonstrate SHA-256 avalanche behavior, an OpenSSL signature, and a Merkle proof.
-- [ ] Explain the security property and limitation of each demonstration.
-
-### Windows Malware Triage
-- [ ] Use a disposable VM snapshot and a benign listener.
-- [ ] Compare process, port, Autoruns, and hash observations.
-- [ ] Document cleanup and snapshot restoration; never submit an unknown file to a scanning service.
-
-## 4. Final review
-
-- [ ] Each combined lab links to its preserved source write-ups where useful.
-- [ ] Every command has a purpose and expected result.
-- [ ] Every result distinguishes fresh observations from historical or expected behavior.
-- [ ] Draft or planned work is not described as completed.
-- [ ] Run the sanitization checker, inspect its warnings, and review the repository as a first-time reader.
+- [ ] Keep each lab marked as a draft until it has been rerun and its evidence reviewed.
+- [ ] State the objective, environment, findings/baseline, action/hardening, and verification.
+- [ ] Distinguish observed results from expectations, historical notes, and limitations.
+- [ ] Remove credentials, tokens, personal data, real hostnames, internal addresses, MAC addresses, and identifying metadata.
+- [ ] Keep raw captures, course handouts, and third-party materials out of the repository.
+- [ ] Paraphrase course material in original wording and cite public references.
+- [ ] Check local Markdown links and inspect every published image before committing.
