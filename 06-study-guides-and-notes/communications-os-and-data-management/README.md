@@ -1,17 +1,17 @@
 # Communications, Operating Systems, and Data Management
 
-Systems, database, wireless, and security study work. The lab pathways link to detailed runbooks and label incomplete exercises explicitly.
+Coursework summaries and foundational study materials. Hands-on cybersecurity lab drafts are filed under their technical domains rather than here.
 
-## Lab pathways
+## Technical-domain labs
 
-- **DRAFT:** [MySQL Data Management](labs/mysql-data-management/README.md) — Workbench/Sakila, database users and recovery, and IT asset tracker design.
-- **DRAFT:** [Wireless Assessment](labs/wireless-assessment/README.md) — initial evidence exists; measurements remain.
 - **DRAFT:** [Endpoint Logging and Detection](../../03-detection-and-incident-response/endpoint-logging-and-detection/README.md) — Sysmon + Wazuh setup is not yet run or validated.
-- **DRAFT:** [Linux Command-Line Basics (Kali)](labs/linux-command-line-basics-kali.md) — results and evidence remain to be added.
+- **DRAFT:** [Wireless Assessment](../../02-network-and-host-hardening/network-security/labs/wireless-assessment/README.md) — existing images are retained with the guide; review sanitization and collect measurements before publication.
+- **DRAFT:** [Windows Server AD DS](../../01-identity-and-cloud-iam/windows-server-ad-ds/README.md) — directory services, DHCP, and related server exercises.
 
 ## Learning drafts
 
 - **DRAFT:** [Programming for Cybersecurity](drafts/README.md) - a sequenced set of unfinished course exercises with completion instructions.
+- [General lab environments](../../07-lab-environments/README.md) — grouped Linux and local MySQL practice that does not fit one security domain.
 
 ## Study notes
 
@@ -37,5 +37,4 @@ Systems, database, wireless, and security study work. The lab pathways link to d
 - [BioStar 2 Biometric Database Exposure](../../03-detection-and-incident-response/case-studies/biostar-2-biometric-database-leak.md)
 - [MSHTML and Graphite Espionage Campaign](../../03-detection-and-incident-response/case-studies/mshtml-graphite-espionage-campaign.md)
 
-Use synthetic/sample data in database labs. Redact identifiers from evidence and distinguish sourced facts from analysis in case studies.
-
+Use synthetic/sample data in database practice. Redact identifiers from evidence and distinguish sourced facts from analysis in case studies.

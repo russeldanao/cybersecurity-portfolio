@@ -1,6 +1,6 @@
 # Wi-Fi Standards, Wireless Attacks and Defenses (and LiFi)
 
-Study notes in my own words. Hands-on: [Wi-Fi assessment lab](../labs/wifi-assessment-with-inssider.md). This note describes attacks at the level needed to defend against them; it is not an attack guide. Test only networks you own or have written permission to test.
+Study notes in my own words. Hands-on: [Wi-Fi assessment lab](../../../02-network-and-host-hardening/network-security/labs/wireless-assessment/wifi-assessment-with-inssider.md). This note describes attacks at the level needed to defend against them; it is not an attack guide. Test only networks you own or have written permission to test.
 
 ## 1. IEEE 802 standards
 **IEEE 802** is a family of standards from the Institute of Electrical and Electronics Engineers that defines how local and metropolitan networks work at the physical and data-link layers.

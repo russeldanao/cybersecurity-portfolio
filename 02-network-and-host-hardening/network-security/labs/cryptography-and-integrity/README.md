@@ -43,6 +43,5 @@ This lab plan covers hashing, encryption, digital signatures, and Merkle inclusi
 
 ## Source and attribution
 
-The exercise topics are adapted from the supplied *Cryptography & Windows Server Lab Report* and *Cryptography Study Guide*. The report's screenshot section contains placeholders, so the proposed steps are not presented as completed results. See the corrected [Cryptography Fundamentals Study Guide](../../../../06-study-guides-and-notes/network-security-notes/cryptography-fundamentals-study-guide.md) before running the exercises. Never commit passwords, private keys, or unredacted source documents.
-
+The exercise topics are adapted from the supplied *Cryptography & Windows Server Lab Report* and *Cryptography Study Guide*. The report's screenshot section contains placeholders, so the proposed steps are not presented as completed results. The focused [AES file-encryption](openssl-aes-file-encryption.md) and [RSA signing](openssl-rsa-signing.md) guides are also drafts, not independently verified runs. See the corrected [Cryptography Fundamentals Study Guide](../../../../06-study-guides-and-notes/network-security-notes/cryptography-fundamentals-study-guide.md) before running the exercises. Never commit passwords, private keys, or unredacted source documents.
 

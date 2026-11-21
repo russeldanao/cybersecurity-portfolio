@@ -1,5 +1,5 @@
 # Lab: RSA Key Generation, Digital Signing, and Asymmetric Encryption (OpenSSL)
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
+> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../../LAB-STUDY-TEMPLATE.md).
 
 
 Status: **Draft — evidence pending.** Original report had empty screenshot placeholders for every step below; nothing here is published as "done" until real output/screenshots replace them. Script also had three bugs from the original coursework version, fixed below.

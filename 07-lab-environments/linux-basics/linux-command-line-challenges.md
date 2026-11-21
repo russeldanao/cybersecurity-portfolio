@@ -1,5 +1,5 @@
-# Linux Challenges Lab Report
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
+# Study Guide: Linux Command-Line Challenges
+> **Draft study guide ? exercise results and prior evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting results.**
 
 
 

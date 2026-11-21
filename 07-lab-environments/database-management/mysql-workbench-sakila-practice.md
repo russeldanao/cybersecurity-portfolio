@@ -1,11 +1,11 @@
-# Lab: MySQL Workbench Setup and SQL Practice on the Sakila Database
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../LAB-STUDY-TEMPLATE.md).
+# Practice Guide: MySQL Workbench and Sakila SQL
+> **Draft study guide ? exercise results and prior evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting results.**
 
 
 
 **Goal:** install MySQL and Workbench, open the Sakila sample database, and use the core `SELECT` clauses with confidence.
 
-**Who this is for:** beginners to databases. **Time:** about 75 minutes. All queries are in [`sakila_practice.sql`](../sql/sakila_practice.sql).
+**Who this is for:** beginners to databases. **Time:** about 75 minutes. All queries are in [`sakila_practice.sql`](sql/sakila_practice.sql).
 
 > **Safety:** keep the server on `localhost`, use a strong root password you do not reuse elsewhere, and do not expose port 3306 to a network.
 
@@ -57,7 +57,7 @@ The result grid shows the rows; the **Action Output** panel below shows how many
 **Tip:** `= NULL` never matches anything. Missing values must be tested with `IS NULL` or `IS NOT NULL`.
 
 ## 4. My first attempt, and the fix
-![Workbench running a BETWEEN query](../screenshots/mysql/01-workbench-between-query.png)
+![Workbench running a BETWEEN query](images/01-workbench-between-query.png)
 *My early `BETWEEN` query in Workbench. The Action Output shows each run and the rows returned.*
 
 The condition I wrote was:
@@ -104,7 +104,7 @@ Do not show your root password, and turn off "Save password in vault" if you do 
 ## 8. Security connection (for the short answers)
 - **SQL injection** happens when user input is pasted into a query string. The defense is **parameterized queries**, not clever filtering.
 - **Least privilege:** applications should connect with an account that can do only what they need, never `root`.
-- **Default and weak credentials** are how many database compromises begin; see [database security](../notes/database-security.md).
+- **Default and weak credentials** are how many database compromises begin; see [database security](../../06-study-guides-and-notes/communications-os-and-data-management/notes/database-security.md).
 
 ## 9. Troubleshooting
 
