@@ -11,7 +11,7 @@ Coursework summaries and foundational study materials. Hands-on cybersecurity la
 ## Learning drafts
 
 - **DRAFT:** [Programming for Cybersecurity](drafts/README.md) - a sequenced set of unfinished course exercises with completion instructions.
-- [General lab environments](../../07-lab-environments/README.md) — grouped Linux and local MySQL practice that does not fit one security domain.
+- [Platform and data security](../../07-platform-and-data-security/README.md) — Linux and local MySQL practice, grouped by environment.
 
 ## Study notes
 

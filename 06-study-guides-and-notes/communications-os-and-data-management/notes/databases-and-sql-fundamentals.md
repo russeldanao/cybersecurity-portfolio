@@ -1,6 +1,6 @@
 # Databases and SQL Fundamentals
 
-Study notes in my own words. Hands-on practice: [Workbench lab](../../../07-lab-environments/database-management/mysql-workbench-sakila-practice.md) and [database design lab](../../../07-lab-environments/database-management/database-design-practice.md).
+Study notes in my own words. Hands-on practice: [Workbench lab](../../../07-platform-and-data-security/database-management/mysql-workbench-sakila-practice.md) and [database design lab](../../../07-platform-and-data-security/database-management/database-design-practice.md).
 
 ## 1. Key terms
 | Term | Meaning |

@@ -29,7 +29,7 @@ cybersecurity-portfolio/
 │   ├── cryptography/
 │   ├── network-security-notes/
 │   └── programming-fundamentals/
-├── 07-lab-environments/
+├── 07-platform-and-data-security/
 │   ├── database-management/
 │   └── linux-basics/
 ├── docs/
@@ -50,4 +50,4 @@ cybersecurity-portfolio/
 4. Record the objective, environment, findings/baseline, action/hardening, and verification.
 5. Publish only fresh evidence that has been reviewed and sanitized.
 
-The `06-study-guides-and-notes/` area is for coursework summaries and reference notes, with no lab directories. Technical lab drafts stay in their domain folders; general Linux and database exercises that do not fit a security domain are grouped under `07-lab-environments/`. Use that folder's index to pick exercises that share a setup.
+The `06-study-guides-and-notes/` area is for coursework summaries and reference notes, with no lab directories. Technical lab drafts stay in their domain folders; foundational Linux and database practice is grouped under `07-platform-and-data-security/`, organized by shared setup.

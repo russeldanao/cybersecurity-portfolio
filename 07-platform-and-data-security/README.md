@@ -1,6 +1,6 @@
-# Lab Environments
+# Platform and Data Security
 
-Use this index to choose a set of related exercises that can be run in one local environment. The actual cybersecurity lab guides remain in their technical-domain folders; general Linux and database practice lives here because it does not fit one security domain.
+This domain covers foundational platform administration and data-security practice that does not fit cleanly under identity, network defense, detection, GRC, or AI security. The tracks group related exercises so they can be completed in one local setup.
 
 ## Environment tracks
 

@@ -1,6 +1,6 @@
 # Database Security: Concerns, Threats, Best Practices and Tools
 
-Study notes in my own words. Related: [users and backup lab](../../../07-lab-environments/database-management/mysql-users-privileges-and-recovery.md), [BioStar 2 case study](../../../03-detection-and-incident-response/case-studies/biostar-2-biometric-database-leak.md).
+Study notes in my own words. Related: [users and backup lab](../../../07-platform-and-data-security/database-management/mysql-users-privileges-and-recovery.md), [BioStar 2 case study](../../../03-detection-and-incident-response/case-studies/biostar-2-biometric-database-leak.md).
 
 ## 1. Why it matters
 Databases hold the information an organization exists to protect: customers, money, health records, credentials. A breach causes direct loss (fraud, ransom, fines), legal exposure (privacy laws require reporting and protection), and lasting damage to trust. Because everything else eventually writes to a database, it is a prime target.
