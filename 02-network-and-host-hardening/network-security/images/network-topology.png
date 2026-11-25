@@ -1,0 +1,3 @@
+flowchart LR
+    VM["Windows 11 VM"] --- NET["VMnet1<br/>Host-only network"]
+    NET --- HOST["Host computer<br/>Wireshark capturing on VMnet1"]
