@@ -1,5 +1,7 @@
 # Name Resolution and Discovery Protocols — Lab Study Guide
 
+For the detailed earlier run and its sanitized screenshots, see the [Windows 11 name-resolution hardening report](windows-11-name-resolution-hardening/windows-11-name-resolution-hardening-lab.md).
+
 > **Draft: historical protocol-hardening observations plus a later baseline review and one additional hardening change.** Older NetBIOS, LLMNR, and SSDP/UPnP findings are kept distinct from the later Windows 11 follow-up. In that follow-up, Microsoft Defender PUA protection was changed from Audit to Enabled and the configuration was verified. PUA blocking behavior was not tested. [Lab study template](../../../../LAB-STUDY-TEMPLATE.md).
 
 ## Key Results
