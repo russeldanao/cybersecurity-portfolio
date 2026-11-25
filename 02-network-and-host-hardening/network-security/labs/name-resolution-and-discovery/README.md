@@ -48,9 +48,9 @@ flowchart LR
     NET --- HOST["Host<br/>Wireshark 4.6.9 capturing on<br/>VMware Network Adapter VMnet1"]
 ```
 
-![VMware isolated network](screenshots/01-vmware-isolated-network.png)
-![Windows build](screenshots/02-windows-build.png)
-![Snapshot created](screenshots/03-vmware-snapshot-created.png)
+![VMware isolated network](../../images/01-vmware-isolated-network.png)
+![Windows build](../../images/02-windows-build.png)
+![Snapshot created](../../images/03-vmware-snapshot-created.png)
 
 ## Findings / Baseline (as found, default settings)
 
@@ -69,9 +69,9 @@ flowchart LR
   - DNS responses: 0.
   - SHA-256: `0acca4dca7c41a3eb8c153394231abf8ae61262f8fc1a461426d337f470e84ce`
 
-![NetBIOS baseline config](screenshots/04-netbios-baseline-config.png)
-![NetBIOS baseline traffic](screenshots/05-netbios-baseline-traffic.png)
-![NetBIOS capture overview (ARP and mDNS rows hidden)](screenshots/05a-netbios-baseline-capture-overview.png)
+![NetBIOS baseline config](../../images/04-netbios-baseline-config.png)
+![NetBIOS baseline traffic](../../images/05-netbios-baseline-traffic.png)
+![NetBIOS capture overview (ARP and mDNS rows hidden)](../../images/05a-netbios-baseline-capture-overview.png)
 
 ### LLMNR
 - **Configuration** (2026-11-23 3:19:22 PM, VM clock): the `DNSClient` policy key was **not present**, so the Windows default applied. Dnscache was Running with startup type Automatic. UDP 5355 was bound by `svchost` (two rows). No TCP 5355 listener.
@@ -85,8 +85,8 @@ flowchart LR
   - DNS responses: 0.
   - SHA-256: `950b1382bb43ae5a684216af0000957750fd175abcbf6513b78db9b951c872cc`
 
-![LLMNR baseline policy](screenshots/06-llmnr-baseline-policy.png)
-![LLMNR baseline traffic](screenshots/07-llmnr-baseline-traffic.png)
+![LLMNR baseline policy](../../images/06-llmnr-baseline-policy.png)
+![LLMNR baseline traffic](../../images/07-llmnr-baseline-traffic.png)
 
 ### SSDP / UPnP
 - **Configuration** (2026-11-23 4:01:54 PM, VM clock): SSDP Discovery (SSDPSRV) Running / Manual; UPnP Device Host (upnphost) Stopped / Manual. UDP 1900 was bound by `svchost` (four rows). No TCP 2869 listener.
@@ -96,8 +96,8 @@ flowchart LR
   - Result: **12 of 127 packets matched.** All were `M-SEARCH * HTTP/1.1`, sent by the host's VMnet1 adapter, in three bursts of four packets about 120 s apart. **0 came from the VM.**
   - SHA-256: `f4e3ad3541d7b52387ac3901bf215b31c00e3d7b1543b59089f025e59f12dd09`
 
-![SSDP/UPnP baseline](screenshots/08-ssdp-upnp-baseline.png)
-![SSDP baseline traffic](screenshots/08a-ssdp-baseline-traffic.png)
+![SSDP/UPnP baseline](../../images/08-ssdp-upnp-baseline.png)
+![SSDP baseline traffic](../../images/08a-ssdp-baseline-traffic.png)
 
 ### DHCP and DNS
 Not part of the baseline or the hardening comparison. A one-time check on the reverted VM is under Additional Tests.
@@ -114,7 +114,7 @@ All changes were made inside the VM in elevated PowerShell (title: Administrator
 
 The VM was restarted once after the changes so that they were fully applied. Two failed NetBIOS attempts and a mistaken undo command that removed the LLMNR value (re-applied at 4:39:52 PM) are documented in Appendix A.
 
-![Hardening actions: LLMNR](screenshots/11-hardening-actions.png)
+![Hardening actions: LLMNR](../../images/11-hardening-actions.png)
 
 ## Verification
 
@@ -132,8 +132,8 @@ The VM was restarted once after the changes so that they were fully applied. Two
 
 The first after-state screenshot (NetBIOS, policy, Dnscache) does not show a timestamp. An empty listener result shows that nothing was bound at that moment, not that a port can never be used.
 
-![After-state config](screenshots/12-after-state-config-and-listeners.png)
-![After-state SSDP and LLMNR listeners](screenshots/12a-after-state-ssdp-llmnr-listeners.png)
+![After-state config](../../images/12-after-state-config-and-listeners.png)
+![After-state SSDP and LLMNR listeners](../../images/12a-after-state-ssdp-llmnr-listeners.png)
 
 ### Traffic after hardening (same capture point, trigger and filter as before)
 
@@ -148,9 +148,9 @@ The first after-state screenshot (NetBIOS, policy, Dnscache) does not show a tim
 - SHA-256 (LLMNR): `8c7652854105829f0037fff3d9bcdeb973d3d507d470a51cfb1bb7098eefb642`
 - SHA-256 (SSDP): `98eed367bb06de78af818ca0faedaa0948ca2120ee989b6bda87708cc801cfaa`
 
-![NetBIOS after-state traffic](screenshots/13-after-state-traffic.png)
-![LLMNR after-state traffic](screenshots/13b-llmnr-after-state-traffic.png)
-![SSDP after-state traffic](screenshots/13c-ssdp-after-state-traffic.png)
+![NetBIOS after-state traffic](../../images/13-after-state-traffic.png)
+![LLMNR after-state traffic](../../images/13b-llmnr-after-state-traffic.png)
+![SSDP after-state traffic](../../images/13c-ssdp-after-state-traffic.png)
 
 ### Reading the results
 - **NetBIOS and LLMNR:** the queries seen at baseline did not appear after hardening, with the trigger present in the capture each time. This is consistent with the changes working. It is one trigger in one capture and does not prove the traffic can never appear.
@@ -162,7 +162,7 @@ The VM was reverted to the `pre-hardening-baseline` snapshot, finishing at about
 
 A read-back at 2026-11-23 4:15:11 PM (VM clock), after the Tools install, showed the checked items matching the baseline: `TcpipNetbiosOptions` = 0 with NetBIOS over Tcpip Enabled, no `DNSClient` policy key, Dnscache Running / Automatic, SSDPSRV Running / Manual and upnphost Stopped / Manual. Because the read-back came after the Tools install, it does not isolate the effect of the revert alone. Listeners were not re-checked after the revert (**Not tested**).
 
-![Cleanup read-back](screenshots/14-cleanup-or-rollback.png)
+![Cleanup read-back](../../images/14-cleanup-or-rollback.png)
 
 ## Additional Tests (after the revert)
 
@@ -172,7 +172,7 @@ These checks ran on the reverted VM, with default settings and VMware Tools inst
 - **2026-11-24 11:55:26 AM (VM clock):** 0 IPv4 and 0 IPv6 default routes, and one active adapter, `Ethernet0`.
 - This reads the routing table at one moment. It is not a connectivity test.
 
-![Guest isolation check](screenshots/01b-guest-isolation-check.png)
+![Guest isolation check](../../images/01b-guest-isolation-check.png)
 
 ### DHCP
 - **Configuration (11:56:49 AM, VM clock):** `Ethernet0` uses DHCP (`DHCP Enabled` = Yes). Lease obtained 11:49:11 AM, expires 12:19:11 PM (30 minutes). A later reading at 6:33:19 PM showed a lease obtained at 6:29:35 PM and expiring at 6:59:37 PM; I did not run a renewal before that reading.
@@ -181,7 +181,7 @@ These checks ran on the reverted VM, with default settings and VMware Tools inst
 - **SHA-256:** `93154de746f326206afbd9bd863979ced0e129519c5ff7f36a3338ae583c8115`
 - The lease times were read separately from the capture, so they cannot be tied to the captured exchange.
 
-![DHCP configuration](screenshots/09-dhcp-baseline.png)
+![DHCP configuration](../../images/09-dhcp-baseline.png)
 
 ### DNS
 - **Configuration (6:35:20 PM, VM clock):** one DNS server is configured on the IPv4 interface. The address is not recorded.
@@ -194,7 +194,7 @@ These checks ran on the reverted VM, with default settings and VMware Tools inst
 - **Reading:** nothing answered the VM's DNS query on the Host-only network in this capture, which matches the timeout. The mDNS answers are a separate protocol and outside the scope of this test. This is one capture of one name.
 - A host-side check of what listens on UDP 53 was not recorded.
 
-![DNS test](screenshots/10-dns-test.png)
+![DNS test](../../images/10-dns-test.png)
 
 ## Repeat Run (second pass, after the revert)
 
@@ -214,14 +214,14 @@ All three changes were made in one elevated PowerShell window, and each worked o
 
 The VM was then restarted once.
 
-![Repeat hardening actions: NetBIOS](screenshots/11r-repeat-hardening-actions.png)
-![Repeat hardening actions: LLMNR and SSDP/UPnP](screenshots/11ra-repeat-hardening-actions-2.png)
+![Repeat hardening actions: NetBIOS](../../images/11r-repeat-hardening-actions.png)
+![Repeat hardening actions: LLMNR and SSDP/UPnP](../../images/11ra-repeat-hardening-actions-2.png)
 
 ### After-state read-back (7:43:26 PM and 7:45:55 PM, VM clock)
 `TcpipNetbiosOptions` = 2 with NetBIOS over Tcpip Disabled; no rows for UDP 137, UDP 138 or TCP 139; `EnableMulticast` = 0; Dnscache Running / Automatic; SSDPSRV and upnphost Stopped / Disabled; no rows for UDP 5355, TCP 5355, UDP 1900 or TCP 2869.
 
-![Repeat after-state config](screenshots/12r-repeat-after-state-config.png)
-![Repeat after-state listeners](screenshots/12ra-repeat-after-state-listeners.png)
+![Repeat after-state config](../../images/12r-repeat-after-state-config.png)
+![Repeat after-state listeners](../../images/12ra-repeat-after-state-listeners.png)
 
 ### Traffic
 
@@ -236,10 +236,10 @@ The VM was then restarted once.
 - Ordinary DNS responses (`dns.flags.response == 1 && !mdns`): 0 in all four captures.
 - SHA-256 (captures kept private): NetBIOS baseline `202f4ed1c6a9251ec5810f13e478ca791a812a0a7776a4918bbb8adb8baf10c3`; LLMNR baseline `ed27b6f541afcfe5517b7c416ce9e73e182afefad4c33487feda63a7d8f318b6`; LLMNR hardened `cf05b583ea3013be06b76fb6e491c7792714f2c129a2e39145b90df475368876`; NetBIOS hardened not recorded.
 
-![NetBIOS repeat baseline](screenshots/05r-netbios-repeat-baseline-traffic.png)
-![LLMNR repeat baseline](screenshots/07r-llmnr-repeat-baseline-traffic.png)
-![NetBIOS repeat hardened](screenshots/13r-repeat-netbios-after-traffic.png)
-![LLMNR repeat hardened, test-name filter (empty)](screenshots/13br-repeat-llmnr-after-traffic.png)
+![NetBIOS repeat baseline](../../images/05r-netbios-repeat-baseline-traffic.png)
+![LLMNR repeat baseline](../../images/07r-llmnr-repeat-baseline-traffic.png)
+![NetBIOS repeat hardened](../../images/13r-repeat-netbios-after-traffic.png)
+![LLMNR repeat hardened, test-name filter (empty)](../../images/13br-repeat-llmnr-after-traffic.png)
 
 ### Reading the repeat
 Both passes gave the same outcome: the VM sent NBNS and LLMNR queries for the test names on the default configuration, and none after hardening, with the trigger present in each capture. The host adapter's own LLMNR queries are separate from the VM's. The repeat does not prove the traffic can never appear.
