@@ -11,6 +11,16 @@
 - **Limits:** NetBIOS and LLMNR were each tested twice, with one capture per run; SSDP once. Windows Firewall and Defender not tested. DHCP, DNS and the guest isolation check were done once, after the revert, outside the main before/after comparison.
 - **AI assistance:** I used an AI assistant to guide the order of steps and to review my screenshots for sensitive information. I ran every command myself and recorded every result.
 
+## Case study navigation
+
+- [Baseline findings](#findings--baseline-as-found-default-settings)
+- [Hardening changes](#action--hardening)
+- [Configuration and traffic verification](#verification)
+- [Repeat run](#repeat-run-second-pass-after-the-revert)
+- [Study notes and real-world considerations](#study-notes)
+- [Scope and limitations](#limitations)
+- [Appendix: process notes](#appendix-a-process-notes)
+
 | Area | Before (default) | After hardening |
 |---|---|---|
 | NetBIOS over TCP/IP | Enabled; 3 NBNS name queries from the VM | Disabled; 0 matching packets |

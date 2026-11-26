@@ -1,9 +1,8 @@
 # Wireless Assessment Lab
-> **Draft study guide - prior results and evidence are unavailable or have not been reverified. Treat existing details as study notes; rerun and sanitize before reporting findings.** [Use the lab template](../../../../LAB-STUDY-TEMPLATE.md).
 
+> **Evidence status:** Partial. The runbook contains two sanitized screenshots and initial scan observations. The walk test, measured results, configuration review, and remaining screenshots are still pending; do not present them as completed.
 
-
-This combined entry points to the [Wi-Fi assessment with inSSIDer runbook](wifi-assessment-with-inssider.md). The write-up includes initial redacted evidence; the walk test, measurements, configuration review, and remaining screenshots still need to be completed.
+This is the wireless module of the [Home Network Security Assessment](../home-network-security-assessment/README.md). Use the [Wi-Fi assessment runbook](wifi-assessment-with-inssider.md) for the procedure, observations, and evidence checklist.
 
 ## Skills Demonstrated
 
